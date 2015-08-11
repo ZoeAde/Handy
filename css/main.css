@@ -23,6 +23,7 @@ body {
 
 .row {
   text-align: center;
+  margin: auto;
 }
 
 /*h1 {
@@ -42,13 +43,13 @@ img {
   text-align: center;
 }
 
-.input {
+/*.input {
   width: 12em;
-}
+}*/
 
 .input__input {
   font-size: 36px;
-  width: 12em;
+  width: 13em;
   padding: 0.5em 0.6em;
   line-height: 1.4;
   -webkit-appearance: none;
@@ -56,10 +57,10 @@ img {
   border: none;
   background-repeat: no-repeat;
   background-image: linear-gradient(to right, #E2BCE8 0%, #985CFF 100%), linear-gradient(to right, #E2BCE8 0%, #985CFF 100%);
-  border-left: 3px solid #E2BCE8;
-  border-right: 3px solid #985CFF;
+  border-left: 15px solid #E2BCE8;
+  border-right: 15px solid #985CFF;
   background-position: 0 0, 0 100%;
-  background-size: 100% 3px;
+  background-size: 100% 15px;
   background-color: transparent;
   color: white;
   text-align: center;
@@ -94,7 +95,7 @@ img {
 
 button {
 /*  position: relative;*/
-  width: 5.8em;
+  width: 6em;
   font-size: 36px;
   padding: 0.5em 0.6em;
   line-height: 1;
@@ -111,12 +112,14 @@ button {
   color: white;
   text-align: center;
 }
-
+/*
 #footer {
+  margin-top: 0;
   height: 85px;
   background-color: #E2BCE8;
 }
+*/
 
-
+.btn
 
 
