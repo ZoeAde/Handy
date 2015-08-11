@@ -4,14 +4,51 @@ $(document).on('ready', function() {
   console.log('sanity check!');
   var header = $('#header');
   var letterBox = $('.input__input');
+  var imgBox = $('.img img');
+  var letterArray = [];
+
+
+var alphabet = {
+  a: "a.jpg",
+  b: "b.jpg",
+  c: "c.jpg",
+  d: "d.jpg",
+  e: "e.jpg",
+  f: "f.jpg",
+  g: "g.jpg",
+  h: "h.jpg",
+  i: "i.jpg",
+  j: "j.jpg",
+  k: "k.jpg",
+  l: "l.jpg",
+  m: "m.jpg",
+  n: "n.jpg",
+  o: "o.jpg",
+  p: "p.jpg",
+  q: "q.jpg",
+  r: "r.jpg",
+  s: "s.jpg",
+  t: "t.jpg",
+  u: "u.jpg",
+  v: "v.jpg",
+  w: "w.jpg",
+  x: "x.jpg",
+  y: "y.jpg",
+  z: "z.jpg"
+};
 
   //when text is entered in input box, the corresponding image appears
   letterBox.on('keyup', function() {
-    var letter = letterBox.val();
-    header.append(letter);
+    var letterInput = letterBox.val();
+    header.append(letterInput);
+
+    //imgBox.attr('src', /images/alphabet[letterInput]);
+
     letterBox.val("");
     letterBox.attr("placeholder", "");
   });
+
+
 
 //not working
   // letterBox.off('click', function() {
@@ -38,6 +75,20 @@ $(document).on('ready', function() {
   // });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
