@@ -1,5 +1,3 @@
-// add scripts
-
 $(document).on('ready', function() {
   console.log('sanity check!');
   var header = $('#header');
@@ -8,7 +6,7 @@ $(document).on('ready', function() {
   var letterArray = [];
   var tempImage;
 
-  //when text is entered in input box, the corresponding image appears in imgBox
+//when text is entered in input box, the corresponding image appears in imgBox and the type box empties
   letterBox.on('keyup', function() {
     var letterInput = letterBox.val();
     var src = alphabet[letterInput];
@@ -21,19 +19,6 @@ $(document).on('ready', function() {
     letterBox.attr("placeholder", "");
   });
 
-
-
-//not working yet
-  // letterBox.off('click', function() {
-  //   letterBox.attr("placeholder", "Type Letter Here");
-  // });
-
-//not working yet
-//button hover color change
-// $('.btn').hover(function () {
-//   $(this).css("color", "#985CFF");
-// });
-
 //reset button clears images/html from footer
   var resetBtn = $('#resetBtn');
   resetBtn.on('click', function() {
@@ -42,17 +27,17 @@ $(document).on('ready', function() {
     imgBox.attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Asl_alphabet_gallaudet_ann.svg/600px-Asl_alphabet_gallaudet_ann.svg.png");
   });
 
-//play button plays through array index in footer
-  // var playBtn = $('#playBtn');
-  // playBtn.on('click', function() {
-  //   setTimeout(function() {
-  //     for (var i = 0; i < letterArray.length; i++) {
-  //       letterArray[i];
-  //     };
+//play button plays through array index in header and pause button becomes available
+  var playBtn = $('#playBtn');
+  playBtn.on('click', function() {
+    setTimeout(function() {
+      for (var i = 0; i < letterArray.length; i++) {
+        letterArray[i];
+      };
 
-  //   }, 5000);
+    }, 5000);
 //change play button to pause function
-  // });
+  });
 
 });
 
