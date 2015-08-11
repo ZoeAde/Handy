@@ -77,7 +77,7 @@ img {
   opacity: 1;
 }
 
-.input__bg {
+/*.input__bg {
   display: block;
   position: absolute;
   z-index: -1;
@@ -88,7 +88,7 @@ img {
   height: 100%;
   background-image: linear-gradient(to right, #E2BCE8 0%, #985CFF 100%), linear-gradient(to right, #E2BCE8 0%, #985CFF 100%);
   transition: all 0.5s ease-out;
-}
+}*/
 
 button {
 /*  position: relative;*/

@@ -4,19 +4,23 @@ $(document).on('ready', function() {
   var letterBox = $('.input__input');
   var imgBox = $('.img img');
   var letterArray = [];
-  var tempImage;
 
 //when text is entered in input box, the corresponding image appears in imgBox and the type box empties
   letterBox.on('keyup', function() {
     var letterInput = letterBox.val();
     var src = alphabet[letterInput];
-    tempImage = imgBox.attr('src', 'images/'+src);
+    imgBox.attr('src', 'images/'+src);
     letterArray.push('images/'+src);
     $('#header div').append("<img class='header' src=images/"+src+">");
 
     letterBox.val("");
     letterBox.attr("placeholder", "");
   });
+
+//when header images pass one line, begin replacing images at index 0 but dont replace items in array;
+
+
+
 
 //reset button clears images/html from footer
   var resetBtn = $('#resetBtn');
@@ -37,6 +41,8 @@ $(document).on('ready', function() {
     // });
     // });
 //change play button to pause function
+
+
 
 
 });
