@@ -26,17 +26,18 @@ body {
   margin: auto;
 }
 
-/*h1 {
+h1 {
   font-size: 80px;
   text-align: center;
   color: #eee;
   font-family: 'Proxima Nova', 'futura', 'helvetica';
-}*/
+}
 
 img {
   padding-bottom: 50px;
   padding-top: 50px;
-  width: 17em;
+  width: 15em;
+  height: 25em;
 }
 
 /*.input {
@@ -109,9 +110,14 @@ button {
   text-align: center;
 }
 
+.header {
+  height: 15em;
+  width: 8em;
+  margin-top: -3.6em;
+}
+
 #header {
   margin-top: 0;
-  height: 85px;
-  background-color: #E2BCE8;
+  height: 6em;
 }
 

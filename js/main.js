@@ -6,43 +6,16 @@ $(document).on('ready', function() {
   var letterBox = $('.input__input');
   var imgBox = $('.img img');
   var letterArray = [];
+  var tempImage;
 
-
-var alphabet = {
-  a: "a.jpg",
-  b: "b.jpg",
-  c: "c.jpg",
-  d: "d.jpg",
-  e: "e.jpg",
-  f: "f.jpg",
-  g: "g.jpg",
-  h: "h.jpg",
-  i: "i.jpg",
-  j: "j.jpg",
-  k: "k.jpg",
-  l: "l.jpg",
-  m: "m.jpg",
-  n: "n.jpg",
-  o: "o.jpg",
-  p: "p.jpg",
-  q: "q.jpg",
-  r: "r.jpg",
-  s: "s.jpg",
-  t: "t.jpg",
-  u: "u.jpg",
-  v: "v.jpg",
-  w: "w.jpg",
-  x: "x.jpg",
-  y: "y.jpg",
-  z: "z.jpg"
-};
-
-  //when text is entered in input box, the corresponding image appears
+  //when text is entered in input box, the corresponding image appears in imgBox
   letterBox.on('keyup', function() {
     var letterInput = letterBox.val();
-    header.append(letterInput);
-
-    //imgBox.attr('src', /images/alphabet[letterInput]);
+    var src = alphabet[letterInput];
+    tempImage = imgBox.attr('src', 'images/'+src);
+    letterArray.push(tempImage);
+    $('#header div').append("<img class='header' src=images/"+src+">");
+    console.log(letterArray);
 
     letterBox.val("");
     letterBox.attr("placeholder", "");
@@ -50,12 +23,12 @@ var alphabet = {
 
 
 
-//not working
+//not working yet
   // letterBox.off('click', function() {
   //   letterBox.attr("placeholder", "Type Letter Here");
   // });
 
-//not working
+//not working yet
 //button hover color change
 // $('.btn').hover(function () {
 //   $(this).css("color", "#985CFF");
@@ -66,12 +39,19 @@ var alphabet = {
   resetBtn.on('click', function() {
     header.text('');
     letterBox.attr("placeholder", "Type Letter Here");
+    imgBox.attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Asl_alphabet_gallaudet_ann.svg/600px-Asl_alphabet_gallaudet_ann.svg.png");
   });
 
 //play button plays through array index in footer
   // var playBtn = $('#playBtn');
   // playBtn.on('click', function() {
-  //   //for loop with time delay?
+  //   setTimeout(function() {
+  //     for (var i = 0; i < letterArray.length; i++) {
+  //       letterArray[i];
+  //     };
+
+  //   }, 5000);
+//change play button to pause function
   // });
 
 });
