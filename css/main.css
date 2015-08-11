@@ -39,10 +39,6 @@ img {
   width: 17em;
 }
 
-.img {
-  text-align: center;
-}
-
 /*.input {
   width: 12em;
 }*/
@@ -112,14 +108,10 @@ button {
   color: white;
   text-align: center;
 }
-/*
-#footer {
+
+#header {
   margin-top: 0;
   height: 85px;
   background-color: #E2BCE8;
 }
-*/
-
-.btn
-
 
