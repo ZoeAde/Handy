@@ -11,9 +11,8 @@ $(document).on('ready', function() {
     var letterInput = letterBox.val();
     var src = alphabet[letterInput];
     tempImage = imgBox.attr('src', 'images/'+src);
-    letterArray.push(tempImage);
+    letterArray.push('images/'+src);
     $('#header div').append("<img class='header' src=images/"+src+">");
-    console.log(letterArray);
 
     letterBox.val("");
     letterBox.attr("placeholder", "");
@@ -27,20 +26,20 @@ $(document).on('ready', function() {
     imgBox.attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Asl_alphabet_gallaudet_ann.svg/600px-Asl_alphabet_gallaudet_ann.svg.png");
   });
 
-//play button plays through array index in header and pause button becomes available
-  var playBtn = $('#playBtn');
-  playBtn.on('click', function() {
-    setTimeout(function() {
-      for (var i = 0; i < letterArray.length; i++) {
-        letterArray[i];
-      };
-
-    }, 5000);
+// play button plays through array index in header and pause button becomes available
+  // var playBtn = $('#playBtn');
+  // playBtn.on('click', function() {
+  //   console.log(letterArray);
+  //   for (var i = 0; i < letterArray.length; i++) {
+  //       console.log(letterArray[i]);
+  //       setTimeout(imgBox.attr('src', letterArray[i]), 10000);
+  //     }
+    // });
+    // });
 //change play button to pause function
-  });
+
 
 });
-
 
 
 
