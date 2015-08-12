@@ -1,23 +1,36 @@
+$(document).on('ready', function() {
+
+  var title = $('#words');
+  var h = $(".h");
+  var a = $(".a");
+  var n = $(".n");
+  var d = $(".d");
+  var y = $(".y");
 
 
-// $(window).on('click', function() {
-//   // $('#words .h').fadeOut('slow', function() {
-//   //   $('#images .h').fadeIn('slow');
-//   // });
-//   // $('#words .d').fadeOut('slow', function() {
-//   //   $('#images .d').fadeIn('slow');
-//   // });
-//   // $('#words .a').fadeOut('slow', function() {
-//   //   $('#images .a').fadeIn('slow');
-//   // });
-//   // $('#words .y').fadeOut('slow', function() {
-//   //   $('#images .y').fadeIn('slow');
-//   // });
-//   // $('#words .n').fadeOut('slow', function() {
-//   //   $('#images .n').fadeIn('slow');
-//   // });
 
 
-// // });
-// $('#words div').show(0).delay(1000).hide(0);
-// $('#images div').show(1000).delay(2000);
+//title words slide down window
+  // title.hide(0).delay(1000).show('slow');
+title.hide();
+title.slideDown(3000);
+
+//title words transition in and out as emoji images appear
+//$('#words').css( "visibility", "hidden" );
+
+
+
+
+
+
+
+
+
+
+
+
+//on click, title disappears and main interactive page appears
+
+
+});
+
