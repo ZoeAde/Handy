@@ -17,6 +17,12 @@ title.slideDown(3000);
 
 //title words transition in and out as emoji images appear
 //$('#words').css( "visibility", "hidden" );
+function flipImages() {
+  h.toggle()
+
+
+
+}
 
 
 
@@ -25,6 +31,11 @@ title.slideDown(3000);
 
 
 
+scroll();
+function scroll() {
+    $(".boxtext").css("bottom", "-300px");
+    $(".boxtext").animate({bottom:"600px"}, 50000, scroll);
+}
 
 
 
