@@ -5,6 +5,26 @@ $(document).on('ready', function() {
   var imgBox = $('.img img');
   var letterArray = [];
 
+// change button backgrounds on hover
+$('button').mouseover(function() {
+  $(this).css("background-color", "#FFCF31");
+});
+
+$('button').mouseleave(function() {
+  $(this).css("background-color", "transparent");
+});
+
+//change input border color on hover
+$('input').mouseover(function() {
+  $(this).css("border-color","#FFCF31");
+})
+
+$('input').mouseleave(function() {
+  $(this).css("border-color","white");
+});
+
+
+
 //DONE - when text is entered in input box, the corresponding image appears in imgBox
   letterBox.on('keyup', function() {
     var letterInput = letterBox.val().slice(-1);
@@ -17,7 +37,7 @@ $(document).on('ready', function() {
   var resetBtn = $('#resetBtn');
   resetBtn.on('click', function() {
     letterBox.val("");
-    letterBox.attr("placeholder", "Type Letter Here");
+    letterBox.attr("placeholder", "Type Word Here");
     letterArray = [];
     imgBox.attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Asl_alphabet_gallaudet_ann.svg/600px-Asl_alphabet_gallaudet_ann.svg.png");
   });

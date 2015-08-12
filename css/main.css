@@ -36,73 +36,35 @@ h1 {
 img {
   padding-bottom: 50px;
   padding-top: 50px;
+  margin-top: 10%;
   width: 15em;
   height: 25em;
 }
 
-/*.input {
-  width: 12em;
-}*/
-
 .input__input {
   font-size: 36px;
-  width: 13em;
+  width: 12em;
   padding: 0.5em 0.6em;
   line-height: 1.4;
   -webkit-appearance: none;
   border-radius: 2px;
-  border: none;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(to right, #E2BCE8 0%, #985CFF 100%), linear-gradient(to right, #E2BCE8 0%, #985CFF 100%);
-  border-left: 15px solid #E2BCE8;
-  border-right: 15px solid #985CFF;
+  border: solid;
+  border-color: white;
   background-position: 0 0, 0 100%;
   background-size: 100% 15px;
   background-color: transparent;
-  color: white;
   text-align: center;
 }
-.input__input::-webkit-input-placeholder {
-  color: #eee;
-  font-family: 'Proxima Nova', 'futura', 'helvetica';
-  transition: color 0.2s ease-out;
-}
-.input__input:focus {
-  outline: none;
-}
-.input__input:focus::-webkit-input-placeholder {
-  color: white;
-}
-.input__input:focus ~ .input__bg {
-  opacity: 1;
-}
-
-/*.input__bg {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to right, #E2BCE8 0%, #985CFF 100%), linear-gradient(to right, #E2BCE8 0%, #985CFF 100%);
-  transition: all 0.5s ease-out;
-}*/
 
 button {
-/*  position: relative;*/
   width: 6em;
   font-size: 36px;
   padding: 0.5em 0.6em;
   line-height: 1;
   -webkit-appearance: none;
   border-radius: 2px;
-  border: none;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(to right, #E2BCE8 0%, #985CFF 100%), linear-gradient(to right, #E2BCE8 0%, #985CFF 100%);
-  border-left: 3px solid #E2BCE8;
-  border-right: 3px solid #985CFF;
+  border: solid;
+  border-color: #FFCF31;
   background-position: 0 0, 0 100%;
   background-size: 100% 3px;
   background-color: transparent;
@@ -110,14 +72,6 @@ button {
   text-align: center;
 }
 
-.header {
-  height: 15em;
-  width: 8em;
-  margin-top: -3.6em;
+::-webkit-input-placeholder {
+  color:#FFCF31;
 }
-
-#header {
-  margin-top: 0;
-  height: 6em;
-}
-
