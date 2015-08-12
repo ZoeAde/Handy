@@ -1,6 +1,6 @@
 $(document).on('ready', function() {
 
-  var title = $('#words');
+  var $title = $('#words');
   var h = $(".h");
   var a = $(".a");
   var n = $(".n");
@@ -11,36 +11,20 @@ $(document).on('ready', function() {
 
 
 //title words slide down window
-  // title.hide(0).delay(1000).show('slow');
-title.hide();
-title.slideDown(3000);
+// $title.hide();
+// $title.slideDown(2800);
+$title.addClass('animated bounceInDown');
+
 
 //title words transition in and out as emoji images appear
-//$('#words').css( "visibility", "hidden" );
-function flipImages() {
-  h.toggle()
-
-
-
-}
-
-
-
-
-
-
-
-
-scroll();
-function scroll() {
-    $(".boxtext").css("bottom", "-300px");
-    $(".boxtext").animate({bottom:"600px"}, 50000, scroll);
-}
-
-
+$('#emojis').css( "visibility", "hidden" );
 
 
 //on click, title disappears and main interactive page appears
+
+
+//animate.css
+
 
 
 });

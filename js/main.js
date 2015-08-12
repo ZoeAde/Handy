@@ -1,6 +1,6 @@
 $(document).on('ready', function() {
-  console.log('sanity check!');
-  var header = $('#header');
+
+//global variables
   var letterBox = $('.input__input');
   var imgBox = $('.img img');
   var letterArray = [];
@@ -13,7 +13,6 @@ $(document).on('ready', function() {
     letterArray.push('images/'+src);
   });
 
-
 // DONE - reset button clears images
   var resetBtn = $('#resetBtn');
   resetBtn.on('click', function() {
@@ -24,15 +23,13 @@ $(document).on('ready', function() {
   });
 
 // play button plays through array index in header and pause button becomes available
-  // var playBtn = $('#playBtn');
-  // playBtn.on('click', function() {
-  //   console.log(letterArray);
-  //   for (var i = 0; i < letterArray.length; i++) {
-  //       console.log(letterArray[i]);
-  //       setTimeout(imgBox.attr('src', letterArray[i]), 10000);
-  //     }
-    // });
-    // });
+  var playBtn = $('#playBtn');
+  playBtn.on('click', function() {
+    for (var i = 0; i < letterArray.length; i++) {
+        console.log(letterArray[i]);
+        setTimeout(imgBox.attr('src', letterArray[i]), 5000);
+    }
+  });
 
 
 
