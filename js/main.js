@@ -5,13 +5,13 @@ $(document).on('ready', function() {
   var imgBox = $('.img img');
   var letterArray = [];
 
-// change button backgrounds on hover
+// change button border color on hover
 $('button').mouseover(function() {
-  $(this).css("background-color", "#FFCF31");
+  $(this).css("border-color", "white");
 });
 
 $('button').mouseleave(function() {
-  $(this).css("background-color", "transparent");
+  $(this).css("border-color", "#FFCF31");
 });
 
 //change input border color on hover
@@ -45,15 +45,20 @@ $('input').mouseleave(function() {
 // play button plays through array index in header and pause button becomes available
   var playBtn = $('#playBtn');
   playBtn.on('click', function() {
+  //pause btn appears in place of play btn
+    if (playBtn.text() === 'Play') {
+      playBtn.text('Pause');
+    }
+    else {
+      playBtn.text('Play');
+    };
+
+//play back images to imgBox
     for (var i = 0; i < letterArray.length; i++) {
-        console.log(letterArray[i]);
-        setTimeout(imgBox.attr('src', letterArray[i]), 5000);
+    console.log(letterArray[i]);
+    setInverval(imgBox.attr('src', letterArray[i]), 5000);
     }
   });
-
-
-
-//change play button to pause function
 
 
 

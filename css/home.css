@@ -11,12 +11,6 @@ body {
   text-align: center;
 }
 
-#words {
-  padding-top: 50%;
-  color: #FFCF31;
-
-}
-
 h1 div {
   display: inline-block;
 }
@@ -24,7 +18,15 @@ h1 div {
 #words div {
   margin: 0 4rem;
 }
+#words {
+  padding-top: 40%;
+  color: #FFCF31;
 
+}
+
+#emojis {
+  padding-top: -10%;
+}
 
 img {
   width: 1.3em;
