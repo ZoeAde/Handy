@@ -36,7 +36,7 @@ h1 {
 img {
   padding-bottom: 50px;
   padding-top: 10px;
-  margin-top: 6%;
+  margin-top: -5%;
   width: 27em;
   height: 30em;
 }
@@ -73,6 +73,7 @@ button {
 }
 
 nav {
+  float: left;
   padding-top: 10px;
   padding-left: 10px;
   font-size: 26px;

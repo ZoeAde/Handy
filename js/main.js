@@ -4,7 +4,7 @@ $(document).on('ready', function() {
   var letterBox = $('.input__input');
   var imgBox = $('.img img');
   var pauseBtn = $('#pauseBtn');
-  var index = [0];
+  var index = 0;
 
 pauseBtn.hide();
 
@@ -41,6 +41,7 @@ letterBox.on('keyup', function() {
   resetBtn.on('click', function() {
     pauseBtn.hide();
     playBtn.show();
+    index = 0;
     letterBox.val("");
     letterBox.attr("placeholder", "Type Word Here");
     imgBox.attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Asl_alphabet_gallaudet_ann.svg/600px-Asl_alphabet_gallaudet_ann.svg.png");
@@ -49,33 +50,43 @@ letterBox.on('keyup', function() {
 //interval function to determine speed of slideshow
 var slideSpeed = function(action, speed) {
   setInterval(function() {action();}, speed);
-}
+};
 
 // play button plays through array index in header and pause button becomes available
   var playBtn = $('#playBtn');
   playBtn.on('click', function() {
-    slideSpeed(playSlides, 1200);
     playBtn.hide();
     pauseBtn.show();
+    slideSpeed(playWords, 1200);
   });
 
   pauseBtn.on('click', function() {
-    // clearInterval(slideSpeed());
+    clearInterval(slideSpeed());
     pauseBtn.hide();
     playBtn.show();
-    imgBox.attr("src", alphabetArray[currentIndex].img);
+    // imgBox.attr("src", alphabetArray[currentIndex].img);
   });
 
-
-function playSlides() {
-  imgBox.attr("src", alphabetArray[index].img);
+function playWords() {
+  var wordArray = letterBox.val();
+  var letter = wordArray[index];
+  imgBox.attr("src", alphabet[letter]);
   index++;
-  if (index >= alphabetArray.length) {
+  if (index >= wordArray.length) {
     index=0;
   }
-  currentIndex = index;
-  console.log(currentIndex);
 }
+
+//play alphabet through
+// function playAlphabet() {
+//   imgBox.attr("src", alphabetArray[index].img);
+//   index++;
+//   if (index >= alphabetArray.length) {
+//     index=0;
+//   }
+//   currentIndex = index;
+//   console.log(currentIndex);
+// }
 });
 
 
