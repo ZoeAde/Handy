@@ -35,10 +35,10 @@ h1 {
 
 img {
   padding-bottom: 50px;
-  padding-top: 50px;
-  margin-top: 10%;
-  width: 15em;
-  height: 25em;
+  padding-top: 10px;
+  margin-top: 2%;
+  width: 25em;
+  height: 35em;
 }
 
 .input__input {

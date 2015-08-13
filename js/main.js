@@ -3,7 +3,6 @@ $(document).on('ready', function() {
 //global variables
   var letterBox = $('.input__input');
   var imgBox = $('.img img');
-  var letterArray = [];
 
 // change button border color on hover
 $('button').mouseover(function() {
@@ -17,7 +16,7 @@ $('button').mouseleave(function() {
 //change input border color on hover
 $('input').mouseover(function() {
   $(this).css("border-color","#FFCF31");
-})
+});
 
 $('input').mouseleave(function() {
   $(this).css("border-color","white");
@@ -26,11 +25,10 @@ $('input').mouseleave(function() {
 
 
 //DONE - when text is entered in input box, the corresponding image appears in imgBox
-  letterBox.on('keyup', function() {
-    var letterInput = letterBox.val().slice(-1);
-    var src = alphabet[letterInput];
-    imgBox.attr('src', 'images/'+src);
-    letterArray.push('images/'+src);
+letterBox.on('keyup', function() {
+  var letterInput = letterBox.val().slice(-1);
+  var src = alphabet[letterInput];
+  imgBox.attr('src', src);
   });
 
 // DONE - reset button clears images
@@ -47,37 +45,57 @@ $('input').mouseleave(function() {
   playBtn.on('click', function() {
   //pause btn appears in place of play btn
     if (playBtn.text() === 'Play') {
-      playBtn.text('Pause');
+      // playBtn.text('Pause');
+      // unhide pause button
+      // hide play button
+      setInterval(function() {playSlides();}, 1500);
     }
     else {
       playBtn.text('Play');
-    };
+
+    }
+
+  });
+
 
 //play back images to imgBox
-    for (var i = 0; i < letterArray.length; i++) {
-    console.log(letterArray[i]);
-    setInverval(imgBox.attr('src', letterArray[i]), 5000);
+  //   for (var i = 0; i < letterArray.length; i++) {
+  //   console.log(letterArray[i]);
+  //   setInverval(imgBox.attr('src', letterArray[i]), 5000);
+  //   }
+  // });
+
+//test1
+// function playSlideshow() {
+//   i = 0;
+//   $('img').attr("src", alphabetArray[i].img);
+//   console.log($('img').attr("src"));
+//   i++;
+//   if (i = alphabetArray.length) {
+//     i = 0;
+//   }
+// }
+
+
+//test2
+var index = 0;
+function playSlides() {
+  imgBox.attr("src", alphabetArray[index].img);
+  index++;
+
+  if (pauseBtn.click()){
+       // debugger;
     }
-  });
+
+  if (index >= alphabetArray.length) {
+    index=0;
+  }
+}
 
 
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

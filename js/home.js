@@ -12,10 +12,10 @@ $(document).on('ready', function() {
 
 
 //title words slide down window
-$title.hide();
-$emojis.hide();
-$title.slideDown(2500);
-$emojis.slideDown(1500);
+// $title.hide();
+// $emojis.hide();
+// $title.slideDown(2500);
+// $emojis.slideDown(1500);
 
 // $title.addClass('animated bounceInDown');
 
