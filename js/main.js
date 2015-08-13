@@ -3,6 +3,10 @@ $(document).on('ready', function() {
 //global variables
   var letterBox = $('.input__input');
   var imgBox = $('.img img');
+  var pauseBtn = $('#pauseBtn');
+  var index = [0];
+
+pauseBtn.hide();
 
 // change button border color on hover
 $('button').mouseover(function() {
@@ -29,72 +33,49 @@ letterBox.on('keyup', function() {
   var letterInput = letterBox.val().slice(-1);
   var src = alphabet[letterInput];
   imgBox.attr('src', src);
+
   });
 
 // DONE - reset button clears images
   var resetBtn = $('#resetBtn');
   resetBtn.on('click', function() {
+    pauseBtn.hide();
+    playBtn.show();
     letterBox.val("");
     letterBox.attr("placeholder", "Type Word Here");
-    letterArray = [];
     imgBox.attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Asl_alphabet_gallaudet_ann.svg/600px-Asl_alphabet_gallaudet_ann.svg.png");
   });
+
+//interval function to determine speed of slideshow
+var slideSpeed = function(action, speed) {
+  setInterval(function() {action();}, speed);
+}
 
 // play button plays through array index in header and pause button becomes available
   var playBtn = $('#playBtn');
   playBtn.on('click', function() {
-  //pause btn appears in place of play btn
-    if (playBtn.text() === 'Play') {
-      // playBtn.text('Pause');
-      // unhide pause button
-      // hide play button
-      setInterval(function() {playSlides();}, 1500);
-    }
-    else {
-      playBtn.text('Play');
+    slideSpeed(playSlides, 1200);
+    playBtn.hide();
+    pauseBtn.show();
+  });
 
-    }
-
+  pauseBtn.on('click', function() {
+    // clearInterval(slideSpeed());
+    pauseBtn.hide();
+    playBtn.show();
+    imgBox.attr("src", alphabetArray[currentIndex].img);
   });
 
 
-//play back images to imgBox
-  //   for (var i = 0; i < letterArray.length; i++) {
-  //   console.log(letterArray[i]);
-  //   setInverval(imgBox.attr('src', letterArray[i]), 5000);
-  //   }
-  // });
-
-//test1
-// function playSlideshow() {
-//   i = 0;
-//   $('img').attr("src", alphabetArray[i].img);
-//   console.log($('img').attr("src"));
-//   i++;
-//   if (i = alphabetArray.length) {
-//     i = 0;
-//   }
-// }
-
-
-//test2
-var index = 0;
 function playSlides() {
   imgBox.attr("src", alphabetArray[index].img);
   index++;
-
-  if (pauseBtn.click()){
-       // debugger;
-    }
-
   if (index >= alphabetArray.length) {
     index=0;
   }
+  currentIndex = index;
+  console.log(currentIndex);
 }
-
-
-
-
 });
 
 
