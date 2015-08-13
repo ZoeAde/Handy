@@ -61,7 +61,7 @@ var slideSpeed = function(action, speed) {
   });
 
   pauseBtn.on('click', function() {
-    clearInterval(slideSpeed());
+    clearInterval();
     pauseBtn.hide();
     playBtn.show();
     // imgBox.attr("src", alphabetArray[currentIndex].img);
