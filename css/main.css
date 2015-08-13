@@ -36,9 +36,9 @@ h1 {
 img {
   padding-bottom: 50px;
   padding-top: 10px;
-  margin-top: 2%;
-  width: 32em;
-  height: 35em;
+  margin-top: 6%;
+  width: 27em;
+  height: 30em;
 }
 
 .input__input {
@@ -71,6 +71,15 @@ button {
   color: white;
   text-align: center;
 }
+
+nav {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 26px;
+  background-color: transparent;
+  color: white;
+}
+
 
 ::-webkit-input-placeholder {
   color:#FFCF31;
