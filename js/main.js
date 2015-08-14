@@ -5,6 +5,7 @@ $(document).on('ready', function() {
   var imgBox = $('.img img');
   var pauseBtn = $('#pauseBtn');
   var index = 0;
+  var timer;
 
 pauseBtn.hide();
 
@@ -45,26 +46,33 @@ letterBox.on('keyup', function() {
     letterBox.val("");
     letterBox.attr("placeholder", "Type Word Here");
     imgBox.attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Asl_alphabet_gallaudet_ann.svg/600px-Asl_alphabet_gallaudet_ann.svg.png");
+    clearInterval(setInterval(function() {playWords();}, 1200));
   });
-
-//interval function to determine speed of slideshow
-var slideSpeed = function(action, speed) {
-  setInterval(function() {action();}, speed);
-};
 
 // play button plays through array index in header and pause button becomes available
   var playBtn = $('#playBtn');
   playBtn.on('click', function() {
     playBtn.hide();
     pauseBtn.show();
-    slideSpeed(playWords, 1200);
+    if (letterBox.val("")) {
+      clearInterval(setInterval(function() {playWords();}, 1200));
+      console.log('nothing');
+    }
+    else {
+    setTimer();
+    }
   });
 
   pauseBtn.on('click', function() {
-    clearInterval();
     pauseBtn.hide();
     playBtn.show();
-    // imgBox.attr("src", alphabetArray[currentIndex].img);
+    if (letterBox.val("")) {
+      clearInterval(setInterval(function() {playWords();}, 1200));
+      console.log('nothing');
+    }
+    else {
+    setTimer();
+    }
   });
 
 function playWords() {
@@ -72,8 +80,19 @@ function playWords() {
   var letter = wordArray[index];
   imgBox.attr("src", alphabet[letter]);
   index++;
+  console.log(index);
   if (index >= wordArray.length) {
     index=0;
+  }
+}
+
+function setTimer() {
+  if (timer) {
+    clearInterval(timer);
+    timer=null;
+  }
+  else {
+    timer = setInterval(function() {playWords();}, 1200);
   }
 }
 
@@ -89,12 +108,3 @@ function playWords() {
 // }
 });
 
-
-
-//make an object with all the images and corresponding letter/number value
-
-//dom onkeydown display image in main focus box, add image to footer
-
-//dom on click reset button, clear footer
-
-//full alphabet view?
