@@ -36,10 +36,10 @@ h1 {
 img {
   padding-bottom: 50px;
   padding-top: 50px;
-  margin-top: -5%;
   width: 27em;
   height: 30em;
   margin-top: 4em;
+  margin-bottom: -4%;
 }
 
 .input__input {
@@ -91,3 +91,13 @@ nav {
 #textOn {
   background-color: #4C273C;
 }
+
+#imageLetter {
+  color: #4C273C;
+  font-weight: bold;
+  font-size: 7em;
+  margin-bottom: -25%;
+}
+
+
+

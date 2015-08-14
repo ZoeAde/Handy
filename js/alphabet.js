@@ -1,4 +1,4 @@
-var alphabetOff = {
+var alphabet = {
   a: "images/a.jpg",
   b: "images/b.jpg",
   c: "images/c.jpg",
@@ -25,33 +25,4 @@ var alphabetOff = {
   x: "images/x.jpg",
   y: "images/y.jpg",
   z: "images/z.jpg"
-};
-
-var alphabetOn = {
-  a: "images/aa.jpg",
-  b: "images/bb.jpg",
-  c: "images/cc.jpg",
-  d: "images/dd.jpg",
-  e: "images/ee.jpg",
-  f: "images/ff.jpg",
-  g: "images/gg.jpg",
-  h: "images/hh.jpg",
-  i: "images/ii.jpg",
-  j: "images/jj.jpg",
-  k: "images/kk.jpg",
-  l: "images/ll.jpg",
-  m: "images/mm.jpg",
-  n: "images/nn.jpg",
-  o: "images/oo.jpg",
-  p: "images/pp.jpg",
-  q: "images/qq.jpg",
-  r: "images/rr.jpg",
-  s: "images/ss.jpg",
-  t: "images/tt.jpg",
-  u: "images/uu.jpg",
-  v: "images/vv.jpg",
-  w: "images/ww.jpg",
-  x: "images/xx.jpg",
-  y: "images/yy.jpg",
-  z: "images/zz.jpg"
 };

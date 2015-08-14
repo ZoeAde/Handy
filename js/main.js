@@ -9,10 +9,14 @@ $(document).on('ready', function() {
   var textOffBtn = $('#textOff');
   var index = 0;
   var timer;
-  var alphabet = alphabetOn;
+  var imageLetter = $('#imageLetter');
+  var text = "on";
+  var letter;
+  // var alphabet = alphabetOn;
 
 pauseBtn.hide();
 textOffBtn.hide();
+imageLetter.html(" ");
 // change button border color on hover
 $('button').mouseover(function() {
   $(this).css("border-color", "white");
@@ -67,13 +71,21 @@ pauseBtn.on('click', function() {
 //plays through letters in input field by changing main image src to given letters img src
 function playWords() {
   var wordArray = letterBox.val();
-  var letter = wordArray[index];
+  letter = wordArray[index];
   imgBox.attr("src", alphabet[letter]);
+  if (text === "on") {
+    imageLetter.html(letter);
+  }
+  else if (text === "off") {
+    imageLetter.html(" ");
+  }
+
   index++;
   console.log("index:" + index);
   if (index >= wordArray.length) {
     index=0;
   }
+
 }
 
 function setTimer() {
@@ -90,26 +102,15 @@ function setTimer() {
 textOnBtn.on('click', function() {
   textOnBtn.hide();
   textOffBtn.show();
-  reset();
-  viewLetters();
+  text = "off";
 });
 
 //on click, turn letter images on
 textOffBtn.on('click', function() {
   textOffBtn.hide();
   textOnBtn.show();
-  reset();
-  viewLetters();
+  text = "on";
 });
 
-//shows images either with or without corresponding letter
-function viewLetters() {
-  if (alphabet === alphabetOff) {
-    alphabet = alphabetOn;
-  }
-  if (alphabet === alphabetOn) {
-    alphabet = alphabetOff;
-  }
-}
 
 });
