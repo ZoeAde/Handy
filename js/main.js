@@ -5,11 +5,14 @@ $(document).on('ready', function() {
   var imgBox = $('.img img');
   var pauseBtn = $('#pauseBtn');
   var playBtn = $('#playBtn');
+  var textOnBtn = $('#textOn');
+  var textOffBtn = $('#textOff');
   var index = 0;
   var timer;
+  var alphabet = alphabetOn;
 
 pauseBtn.hide();
-
+textOffBtn.hide();
 // change button border color on hover
 $('button').mouseover(function() {
   $(this).css("border-color", "white");
@@ -48,18 +51,18 @@ letterBox.on('keyup', function() {
   });
 
 // play button plays through array index in header and pause button becomes available
-  playBtn.on('click', function() {
-    playBtn.hide();
-    pauseBtn.show();
-    setTimer();
-  });
+playBtn.on('click', function() {
+  playBtn.hide();
+  pauseBtn.show();
+  setTimer();
+});
 
 //pause btn stops setInterval on given index
-  pauseBtn.on('click', function() {
-    pauseBtn.hide();
-    playBtn.show();
-    setTimer();
-  });
+pauseBtn.on('click', function() {
+  pauseBtn.hide();
+  playBtn.show();
+  setTimer();
+});
 
 //plays through letters in input field by changing main image src to given letters img src
 function playWords() {
@@ -82,4 +85,31 @@ function setTimer() {
     timer = setInterval(function() {playWords();}, 1200);
   }
 }
+
+//on click, turn letter images off
+textOnBtn.on('click', function() {
+  textOnBtn.hide();
+  textOffBtn.show();
+  reset();
+  viewLetters();
+});
+
+//on click, turn letter images on
+textOffBtn.on('click', function() {
+  textOffBtn.hide();
+  textOnBtn.show();
+  reset();
+  viewLetters();
+});
+
+//shows images either with or without corresponding letter
+function viewLetters() {
+  if (alphabet === alphabetOff) {
+    alphabet = alphabetOn;
+  }
+  if (alphabet === alphabetOn) {
+    alphabet = alphabetOff;
+  }
+}
+
 });
