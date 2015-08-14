@@ -40,6 +40,12 @@ letterBox.on('keyup', function() {
   var letterInput = letterBox.val().slice(-1);
   var src = alphabet[letterInput];
   imgBox.attr('src', src);
+  if (text === "on") {
+    imageLetter.html(letterInput);
+  }
+  else if (text === "off") {
+    imageLetter.html(" ");
+  }
 });
 
 // DONE - reset button clears images
