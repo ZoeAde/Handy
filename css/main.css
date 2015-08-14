@@ -54,6 +54,7 @@ img {
   background-size: 100% 15px;
   background-color: transparent;
   text-align: center;
+  color:white;
 }
 
 button {
@@ -85,3 +86,4 @@ nav {
 ::-webkit-input-placeholder {
   color:#FFCF31;
 }
+

@@ -1,4 +1,3 @@
-
 var alphabet = {
   a: "images/a.jpg",
   b: "images/b.jpg",

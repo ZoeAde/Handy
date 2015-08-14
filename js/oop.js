@@ -1,3 +1,59 @@
+//CLASS:
+//make alphabet class
+//class has play/pause status
+//class has letter on/off status
+//class has letter
+//class has img
+
+
+//METHODS:
+//show image when key is entered method
+//play word method (plays back letters in input)
+//play alphabet method (plays through entire alphabet continuously)
+//pause method (stops play method at current index)
+//reset method
+//quiz method that shows alphabet without letters and requires input to match (change letter status to off), checks answers once letter is in input
+
+
+//QUESTIONS:
+//how does setInterval respond to play/pause status?
+//does each letter need to be a new instance of alphabet class?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).on('ready', function() {
 
 //global variables
@@ -61,4 +117,10 @@ playBtn.on('click', function() {
 
 
 });
+
+
+
+
+
+
 
