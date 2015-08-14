@@ -12,7 +12,7 @@ $(document).on('ready', function() {
   var imageLetter = $('#imageLetter');
   var text = "on";
   var letter;
-  // var alphabet = alphabetOn;
+  var resetBtn = $('#resetBtn');
 
 pauseBtn.hide();
 textOffBtn.hide();
@@ -49,7 +49,6 @@ letterBox.on('keyup', function() {
 });
 
 // DONE - reset button clears images
-  var resetBtn = $('#resetBtn');
   resetBtn.on('click', function() {
     pauseBtn.hide();
     playBtn.show();
