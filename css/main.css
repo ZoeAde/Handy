@@ -59,7 +59,7 @@ img {
 }
 
 button {
-  width: 3.93em;
+  width: 2.9em;
   font-size: 36px;
   padding: 0.5em 0.6em;
   line-height: 1;
@@ -78,7 +78,7 @@ button {
   color:#FFCF31;
 }
 
-#textOn {
+.on {
   background-color: #4C273C;
 }
 
