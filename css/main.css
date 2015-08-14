@@ -74,16 +74,6 @@ button {
   text-align: center;
 }
 
-nav {
-  float: left;
-  padding-top: 10px;
-  padding-left: 10px;
-  font-size: 26px;
-  background-color: transparent;
-  color: white;
-}
-
-
 ::-webkit-input-placeholder {
   color:#FFCF31;
 }
@@ -98,6 +88,3 @@ nav {
   font-size: 7em;
   margin-bottom: -25%;
 }
-
-
-

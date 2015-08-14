@@ -13,6 +13,8 @@ $(document).on('ready', function() {
   var text = "on";
   var letter;
   var resetBtn = $('#resetBtn');
+  // var mySlider = $("input.slider").slider();
+  // var speed = mySlider.slider('getValue');
 
 pauseBtn.hide();
 textOffBtn.hide();
@@ -117,5 +119,11 @@ textOffBtn.on('click', function() {
   text = "on";
 });
 
+// $("#speedSlider").slider({
+//   min: 1000,
+//   max: 5000,
+//   scale: 'logarithmic',
+//   step: 100
+// });
 
 });
