@@ -58,3 +58,32 @@ var alphabetArray = [
   {letter: "y", img: "images/y.jpg"},
   {letter: "z", img: "images/z.jpg"}
 ];
+
+var alphabetLettered = [
+  {letter: "a", img: "images/aa.jpg"},
+  {letter: "b", img: "images/bb.jpg"},
+  {letter: "c", img: "images/cc.jpg"},
+  {letter: "d", img: "images/dd.jpg"},
+  {letter: "e", img: "images/ee.jpg"},
+  {letter: "f", img: "images/ff.jpg"},
+  {letter: "g", img: "images/gg.jpg"},
+  {letter: "h", img: "images/hh.jpg"},
+  {letter: "i", img: "images/ii.jpg"},
+  {letter: "j", img: "images/jj.jpg"},
+  {letter: "k", img: "images/kk.jpg"},
+  {letter: "l", img: "images/ll.jpg"},
+  {letter: "m", img: "images/mm.jpg"},
+  {letter: "n", img: "images/nn.jpg"},
+  {letter: "o", img: "images/oo.jpg"},
+  {letter: "p", img: "images/pp.jpg"},
+  {letter: "q", img: "images/qq.jpg"},
+  {letter: "r", img: "images/rr.jpg"},
+  {letter: "s", img: "images/ss.jpg"},
+  {letter: "t", img: "images/tt.jpg"},
+  {letter: "u", img: "images/uu.jpg"},
+  {letter: "v", img: "images/vv.jpg"},
+  {letter: "w", img: "images/ww.jpg"},
+  {letter: "x", img: "images/xx.jpg"},
+  {letter: "y", img: "images/yy.jpg"},
+  {letter: "z", img: "images/zz.jpg"}
+];
