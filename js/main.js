@@ -69,8 +69,6 @@ $('input').mouseleave(function() {
 });
 
 //On Click Functions:
-
-//on click, turn letter images off
 // play button plays through array index in header and pause button becomes available
 playBtn.on('click', function() {
   change(playBtn, pauseBtn);
@@ -85,7 +83,6 @@ pauseBtn.on('click', function() {
 
 resetBtn.on('click', function() {
   reset();
-  clearInterval(setInterval(function() {playWords();}, 1200));
 });
 
 textOnBtn.on('click', function() {
