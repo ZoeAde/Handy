@@ -9,6 +9,12 @@ $(document).on('ready', function() {
   var textOffBtn = $('#textOff');
   var imageLetter = $('#imageLetter');
   var resetBtn = $('#resetBtn');
+  var alphabetCopy = alphabetArray.slice();
+  var quizOn = $('#quizOn');
+  var quizOff = $('#quizOff');
+  var quiz = "off";
+  var quizLetter;
+console.log(alphabetCopy.length);
 
 reset();
 
@@ -24,6 +30,7 @@ function reset() {
   letterBox.val("");
   letterBox.attr("placeholder", "Type Word Here");
   imgBox.attr('src', "images/play.png");
+  var alphabetCopy = alphabetArray.splice();
   clearInterval(timer);
 }
 
@@ -40,7 +47,8 @@ function setTimer(speed) {
 
 //plays through letters in input field by changing main image src to given letters img src
 function playWords() {
-  var wordArray = letterBox.val();
+  var word = letterBox.val();
+  var wordArray = word.replace(/ /g,'');
   letter = wordArray[index];
   imgBox.attr("src", alphabet[letter]);
   showLetter(imageLetter, letter);
@@ -50,8 +58,14 @@ function playWords() {
   }
 }
 
-
-
+function quizGame() {
+  var random = Math.floor(Math.random() * alphabetCopy.length);
+  quizLetter = Object.keys(alphabetCopy[random]);
+  imgBox.attr('src', alphabet[keys[quizLetter]]);
+  if (alphabetCopy.length < 1) {
+    var alphabetCopy = alphabetArray;
+  }
+}
 
 // change button border color on hover
 $('button').mouseover(function() {
@@ -108,13 +122,25 @@ quizOn.on('click', function() {
 //on click, turn letter images on
 quizOff.on('click', function() {
   change(quizOff, quizOn);
+  letterBox.val("");
+  letterBox.attr("placeholder", "Enter letter here");
   quiz = "on";
+  quizGame();
 });
 
 letterBox.on('keyup', function() {
   var letterInput = letterBox.val().slice(-1);
+  if (quiz = "off") {
   imgBox.attr('src', alphabet[letterInput]);
   showLetter(imageLetter, letterInput);
+}
+  else {
+    if (quizLetter === letterInput) {
+      quizGame();
+      alphabetCopy.splice(random, 1);
+      letterBox.val("");
+    }
+  }
 });
 
 });

@@ -1,5 +1,4 @@
   var text = "off";
-  var quiz = "off";
   var letter;
   var index = 0;
   var timer;

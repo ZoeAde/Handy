@@ -1,4 +1,4 @@
-$(document).on('ready', function() {
+// $(document).on('ready', function() {
 
 // imageLetter.html(" ");
 // change(pauseBtn, playBtn);
@@ -85,4 +85,4 @@ $(document).on('ready', function() {
 //   showLetter(letterInput);
 // });
 
-});
+// });
