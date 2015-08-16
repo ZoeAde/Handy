@@ -50,6 +50,9 @@ function playWords() {
   }
 }
 
+
+
+
 // change button border color on hover
 $('button').mouseover(function() {
   $(this).css("border-color", "white");
@@ -111,14 +114,7 @@ quizOff.on('click', function() {
 letterBox.on('keyup', function() {
   var letterInput = letterBox.val().slice(-1);
   imgBox.attr('src', alphabet[letterInput]);
-  showLetter(ImageLetter, letterInput);
+  showLetter(imageLetter, letterInput);
 });
-
-// $("#speedSlider").slider({
-//   min: 1000,
-//   max: 5000,
-//   scale: 'logarithmic',
-//   step: 100
-// });
 
 });
