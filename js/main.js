@@ -14,6 +14,7 @@ $(document).on('ready', function() {
   var quizOff = $('#quizOff');
   var quiz = "off";
   var random;
+  var incorrect;
 console.log(alphabetCopy.length);
 
 reset();
@@ -26,11 +27,12 @@ function reset() {
   index = 0;
   text = "off";
   quiz = "off";
-  imageLetter.html("");
+  // imageLetter.html("");
   letterBox.val("");
   letterBox.attr("placeholder", "Type Word Here");
   imgBox.attr('src', "images/play.png");
-  alphabetCopy = alphabetArray.splice(0);
+  alphabetCopy = alphabetArray.slice(0);
+  incorrect = 0;
   clearInterval(timer);
 }
 
@@ -59,16 +61,18 @@ function playWords() {
 }
 
 function quizGame() {
+  if (alphabetCopy.length < 1) {
+    alert("You've finished the quiz! You had " + incorrect + " incorrect answers.");
+    reset();
+  }
+  else {
   quiz = "on";
   quizLetter = "";
   random = Math.floor(Math.random() * alphabetCopy.length);
-  console.log(random);
   quizLetter = Object.keys(alphabetCopy[random]).toString();
   console.log(quizLetter);
   imgBox.attr('src', alphabet[quizLetter]);
-  // if (alphabetCopy.length < 1) {
-  //   var alphabetCopy = alphabetArray;
-  // }
+  }
 }
 
 
@@ -127,12 +131,15 @@ quizOn.on('click', function() {
 //on click, turn letter images on
 quizOff.on('click', function() {
   change(quizOff, quizOn);
-  // change(textOn, textOff);
+  clearInterval(timer);
+  change(pauseBtn, playBtn);
+  change(textOnBtn,textOffBtn);
+
   letterBox.val("");
   letterBox.attr("placeholder", "Enter letter here");
   quiz = "on";
   text = "off";
-  imageLetter = "";
+  imageLetter.html("");
   quizGame();
 });
 
@@ -141,13 +148,13 @@ letterBox.on('keyup', function() {
   if (quiz === "on") {
     letterInput = letterBox.val();
     if (quizLetter === letterInput) {
-      console.log(true);
       alphabetCopy.splice(random, 1);
       letterBox.val("");
       letterBox.attr("placeholder", "Enter letter here");
       quizGame();
     }
     else {
+      incorrect ++;
       letterBox.val("");
       letterBox.attr("placeholder", "Try again!");
     }
@@ -160,3 +167,24 @@ letterBox.on('keyup', function() {
 });
 
 });
+
+
+
+// function quizGame() {
+//   quiz = "on";
+//   quizLetter = "";
+//   if (alphabetCopy.length === 0) {
+//     gameOver();
+//   }
+//   else {
+//   random = Math.floor(Math.random() * alphabetCopy.length);
+//   quizLetter = Object.keys(alphabetCopy[random]).toString();
+//   console.log(quizLetter);
+//   imgBox.attr('src', alphabet[quizLetter]);
+//   }
+// }
+
+// function gameOver() {
+//   alert("You've finished the quiz! You had " + incorrect + " incorrect answers.");
+//   reset();
+// }
