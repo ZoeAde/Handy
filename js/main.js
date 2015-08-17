@@ -15,7 +15,8 @@ $(document).on('ready', function() {
   var quiz = "off";
   var random;
   var incorrect;
-  var speedBtn = $('.speed')
+  var speedBtns = $('.speed');
+  var speed = 1900;
 console.log(alphabetCopy.length);
 
 reset();
@@ -34,6 +35,7 @@ function reset() {
   imgBox.attr('src', "images/play.png");
   alphabetCopy = alphabetArray.slice(0);
   incorrect = 0;
+  $('#slow').css('background-color', '#FFCF31')
   clearInterval(timer);
 }
 
@@ -47,6 +49,7 @@ function setTimer(speed) {
     timer = setInterval(function() {playWords();}, speed);
   }
 }
+
 
 //plays through letters in input field by changing main image src to given letters img src
 function playWords() {
@@ -99,13 +102,14 @@ $('input').mouseleave(function() {
 // play button plays through array index in header and pause button becomes available
 playBtn.on('click', function() {
   change(playBtn, pauseBtn);
-  setTimer(1200);
+  setTimer(speed);
+  console.log(speed);
 });
 
 //pause btn stops setInterval on given index
 pauseBtn.on('click', function() {
   change(pauseBtn, playBtn);
-  setTimer(1200);
+  setTimer(speed);
 });
 
 resetBtn.on('click', function() {
@@ -167,13 +171,23 @@ letterBox.on('keyup', function() {
   }
 });
 
-// speedBtn.on('click', function() {
-//   $(this).css("background-color", "#FFCF31");
-//   if ($(this).id() === "slow") {
-//     console.log('slow');
-//   }
-// })
+$('#slow').on('click', function() {
+  speedBtns.css('background-color', 'transparent');
+  $(this).css('background-color', '#FFCF31');
+  speed = 1900;
+})
 
+$('#medium').on('click', function() {
+  speedBtns.css('background-color', 'transparent');
+  $(this).css('background-color', '#FFCF31');
+  speed = 1200;
+})
 
+$('#fast').on('click', function() {
+  speedBtns.css('background-color', 'transparent');
+  $(this).css('background-color', '#FFCF31');
+  speed = 800;
+})
 
 });
+
