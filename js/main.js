@@ -26,7 +26,7 @@ function reset() {
   index = 0;
   text = "off";
   quiz = "off";
-  imageLetter.html(" ");
+  imageLetter.html("");
   letterBox.val("");
   letterBox.attr("placeholder", "Type Word Here");
   imgBox.attr('src', "images/play.png");
@@ -38,7 +38,7 @@ function reset() {
 function setTimer(speed) {
   if (timer) {
     clearInterval(timer);
-    timer=null;
+    timer = null;
   }
   else {
     timer = setInterval(function() {playWords();}, speed);
@@ -59,7 +59,7 @@ function playWords() {
 }
 
 function quizGame() {
-  quiz = "on"
+  quiz = "on";
   quizLetter = "";
   random = Math.floor(Math.random() * alphabetCopy.length);
   console.log(random);

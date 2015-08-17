@@ -19,3 +19,15 @@ function showLetter(target, letter) {
     target.html(" ");
   }
 }
+
+
+//sets speed of image slideshow
+function setTimer(speed) {
+  if (timer) {
+    clearInterval(timer);
+    timer = null;
+  }
+  else {
+    timer = setInterval(function() {playWords();}, speed);
+  }
+}
