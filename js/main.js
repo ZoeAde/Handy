@@ -63,7 +63,7 @@ function quizGame() {
   quizLetter = "";
   random = Math.floor(Math.random() * alphabetCopy.length);
   console.log(random);
-  quizLetter = Object.keys(alphabetCopy[random]);
+  quizLetter = Object.keys(alphabetCopy[random]).toString();
   console.log(quizLetter);
   imgBox.attr('src', alphabet[quizLetter]);
   // if (alphabetCopy.length < 1) {
@@ -127,20 +127,19 @@ quizOn.on('click', function() {
 //on click, turn letter images on
 quizOff.on('click', function() {
   change(quizOff, quizOn);
+  // change(textOn, textOff);
   letterBox.val("");
   letterBox.attr("placeholder", "Enter letter here");
   quiz = "on";
+  text = "off";
+  imageLetter = "";
   quizGame();
 });
 
 letterBox.on('keyup', function() {
   var letterInput;
-  console.log(quiz);
-
   if (quiz === "on") {
-    letterInput = [letterBox.val()];
-    console.log(letterInput);
-    console.log(quizLetter);
+    letterInput = letterBox.val();
     if (quizLetter === letterInput) {
       console.log(true);
       alphabetCopy.splice(random, 1);
