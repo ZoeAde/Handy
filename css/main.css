@@ -39,7 +39,7 @@ img {
   width: 31em;
   height: 35em;
   margin-top: 7%;
-  margin-bottom: 1%;
+  margin-bottom: -2%;
 }
 
 .input__input {
@@ -85,6 +85,14 @@ button {
 #imageLetter {
   color: #4C273C;
   font-weight: bold;
-  font-size: 7em;
+  font-size: 9em;
   margin-bottom: -25%;
+}
+
+.speed {
+  font-size: 15px;
+  border-width: 1px;
+  padding: 5px;
+  width: 5em;
+  margin-top: 1%;
 }

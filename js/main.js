@@ -15,6 +15,7 @@ $(document).on('ready', function() {
   var quiz = "off";
   var random;
   var incorrect;
+  var speedBtn = $('.speed')
 console.log(alphabetCopy.length);
 
 reset();
@@ -165,5 +166,14 @@ letterBox.on('keyup', function() {
     showLetter(imageLetter, letterInput);
   }
 });
+
+// speedBtn.on('click', function() {
+//   $(this).css("background-color", "#FFCF31");
+//   if ($(this).id() === "slow") {
+//     console.log('slow');
+//   }
+// })
+
+
 
 });
