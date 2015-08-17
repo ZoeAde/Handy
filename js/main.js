@@ -167,24 +167,3 @@ letterBox.on('keyup', function() {
 });
 
 });
-
-
-
-// function quizGame() {
-//   quiz = "on";
-//   quizLetter = "";
-//   if (alphabetCopy.length === 0) {
-//     gameOver();
-//   }
-//   else {
-//   random = Math.floor(Math.random() * alphabetCopy.length);
-//   quizLetter = Object.keys(alphabetCopy[random]).toString();
-//   console.log(quizLetter);
-//   imgBox.attr('src', alphabet[quizLetter]);
-//   }
-// }
-
-// function gameOver() {
-//   alert("You've finished the quiz! You had " + incorrect + " incorrect answers.");
-//   reset();
-// }
