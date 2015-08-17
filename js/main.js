@@ -9,11 +9,11 @@ $(document).on('ready', function() {
   var textOffBtn = $('#textOff');
   var imageLetter = $('#imageLetter');
   var resetBtn = $('#resetBtn');
-  var alphabetCopy = alphabetArray.slice();
+  var alphabetCopy = alphabetArray.slice(0);
   var quizOn = $('#quizOn');
   var quizOff = $('#quizOff');
   var quiz = "off";
-  var quizLetter;
+  var random;
 console.log(alphabetCopy.length);
 
 reset();
@@ -23,14 +23,14 @@ function reset() {
   change(pauseBtn, playBtn);
   change(textOnBtn, textOffBtn);
   change(quizOn, quizOff);
-  var index = 0;
-  var text = "off";
-  var quiz = "off";
+  index = 0;
+  text = "off";
+  quiz = "off";
   imageLetter.html(" ");
   letterBox.val("");
   letterBox.attr("placeholder", "Type Word Here");
   imgBox.attr('src', "images/play.png");
-  var alphabetCopy = alphabetArray.splice();
+  alphabetCopy = alphabetArray.splice(0);
   clearInterval(timer);
 }
 
@@ -59,13 +59,18 @@ function playWords() {
 }
 
 function quizGame() {
-  var random = Math.floor(Math.random() * alphabetCopy.length);
+  quiz = "on"
+  quizLetter = "";
+  random = Math.floor(Math.random() * alphabetCopy.length);
+  console.log(random);
   quizLetter = Object.keys(alphabetCopy[random]);
-  imgBox.attr('src', alphabet[keys[quizLetter]]);
-  if (alphabetCopy.length < 1) {
-    var alphabetCopy = alphabetArray;
-  }
+  console.log(quizLetter);
+  imgBox.attr('src', alphabet[quizLetter]);
+  // if (alphabetCopy.length < 1) {
+  //   var alphabetCopy = alphabetArray;
+  // }
 }
+
 
 // change button border color on hover
 $('button').mouseover(function() {
@@ -129,17 +134,29 @@ quizOff.on('click', function() {
 });
 
 letterBox.on('keyup', function() {
-  var letterInput = letterBox.val().slice(-1);
-  if (quiz = "off") {
-  imgBox.attr('src', alphabet[letterInput]);
-  showLetter(imageLetter, letterInput);
-}
-  else {
+  var letterInput;
+  console.log(quiz);
+
+  if (quiz === "on") {
+    letterInput = [letterBox.val()];
+    console.log(letterInput);
+    console.log(quizLetter);
     if (quizLetter === letterInput) {
-      quizGame();
+      console.log(true);
       alphabetCopy.splice(random, 1);
       letterBox.val("");
+      letterBox.attr("placeholder", "Enter letter here");
+      quizGame();
     }
+    else {
+      letterBox.val("");
+      letterBox.attr("placeholder", "Try again!");
+    }
+  }
+  else {
+    letterInput = letterBox.val().slice(-1);
+    imgBox.attr('src', alphabet[letterInput]);
+    showLetter(imageLetter, letterInput);
   }
 });
 
