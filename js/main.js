@@ -27,7 +27,7 @@ function reset() {
   index = 0;
   text = "off";
   quiz = "off";
-  // imageLetter.html("");
+  imageLetter.html("");
   letterBox.val("");
   letterBox.attr("placeholder", "Type Word Here");
   imgBox.attr('src', "images/play.png");
