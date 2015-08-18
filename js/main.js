@@ -12,7 +12,7 @@ $(document).on('ready', function() {
   var quizOff = $('#quizOff');
   var speedBtns = $('.speed');
   var alphabetCopy = alphabetArray.slice(0);
-
+  var speed = 1900;
 reset();
 
 //reset screen to original format
