@@ -5,7 +5,7 @@
   var quiz = "off";
   var random;
   var incorrect;
-  var speed = 1900;
+
 
 //on and off for overlapping css buttons
 function change(hide, show) {
