@@ -25,6 +25,7 @@ function reset() {
   letterBox.attr("placeholder", "Type Word Here");
   imgBox.attr('src', "images/play.png");
   alphabetCopy = alphabetArray.slice(0);
+  speedBtns.css('background-color', 'transparent');
   $('#slow').css('background-color', '#FFCF31')
   clearInterval(timer);
   startValues();
