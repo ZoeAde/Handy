@@ -1,6 +1,5 @@
 $(document).on('ready', function() {
 
-//global variables
   var letterBox = $('.input__input');
   var imgBox = $('.img img');
   var pauseBtn = $('#pauseBtn');
@@ -9,15 +8,10 @@ $(document).on('ready', function() {
   var textOffBtn = $('#textOff');
   var imageLetter = $('#imageLetter');
   var resetBtn = $('#resetBtn');
-  var alphabetCopy = alphabetArray.slice(0);
   var quizOn = $('#quizOn');
   var quizOff = $('#quizOff');
-  var quiz = "off";
-  var random;
-  var incorrect;
   var speedBtns = $('.speed');
-  var speed = 1900;
-console.log(alphabetCopy.length);
+  var alphabetCopy = alphabetArray.slice(0);
 
 reset();
 
@@ -26,17 +20,14 @@ function reset() {
   change(pauseBtn, playBtn);
   change(textOnBtn, textOffBtn);
   change(quizOn, quizOff);
-  index = 0;
-  text = "off";
-  quiz = "off";
   imageLetter.html("");
   letterBox.val("");
   letterBox.attr("placeholder", "Type Word Here");
   imgBox.attr('src', "images/play.png");
   alphabetCopy = alphabetArray.slice(0);
-  incorrect = 0;
   $('#slow').css('background-color', '#FFCF31')
   clearInterval(timer);
+  startValues();
 }
 
 //sets speed of image slideshow
@@ -49,7 +40,6 @@ function setTimer(speed) {
     timer = setInterval(function() {playWords();}, speed);
   }
 }
-
 
 //plays through letters in input field by changing main image src to given letters img src
 function playWords() {
@@ -64,6 +54,7 @@ function playWords() {
   }
 }
 
+//starts letter recognition game
 function quizGame() {
   if (alphabetCopy.length < 1) {
     alert("You've finished the quiz! You had " + incorrect + " incorrect answers.");
@@ -112,34 +103,35 @@ pauseBtn.on('click', function() {
   setTimer(speed);
 });
 
+//reset window
 resetBtn.on('click', function() {
   reset();
 });
 
+//remove text letters from screen
 textOnBtn.on('click', function() {
   change(textOnBtn, textOffBtn);
   text = "off";
 });
 
-//on click, turn letter images on
+//show text letters on screen
 textOffBtn.on('click', function() {
   change(textOffBtn, textOnBtn);
   text = "on";
 });
 
-//on click, turn letter images off
+//turn quiz off
 quizOn.on('click', function() {
   change(quizOn, quizOff);
   quiz = "off";
 });
 
-//on click, turn letter images on
+//turn quiz on, hide letters, stop slideshow
 quizOff.on('click', function() {
   change(quizOff, quizOn);
   clearInterval(timer);
   change(pauseBtn, playBtn);
   change(textOnBtn,textOffBtn);
-
   letterBox.val("");
   letterBox.attr("placeholder", "Enter letter here");
   quiz = "on";
@@ -148,6 +140,7 @@ quizOff.on('click', function() {
   quizGame();
 });
 
+//when user types in letter, if they are playing the game it will test if right and move on, otherwise it will show the corresponding image
 letterBox.on('keyup', function() {
   var letterInput;
   if (quiz === "on") {
@@ -171,6 +164,7 @@ letterBox.on('keyup', function() {
   }
 });
 
+//change slideshow speeds between three values
 $('#slow').on('click', function() {
   speedBtns.css('background-color', 'transparent');
   $(this).css('background-color', '#FFCF31');
