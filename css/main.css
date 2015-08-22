@@ -3,9 +3,37 @@ body {
   height: 100%;
 }
 
+.sidebar {
+  background-color: #4C273C;
+  border-right-style: solid;
+  border-right-width: 1px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+/*  z-index: -1;*/
+}
+
+.gamebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+/*  z-index: -1;*/
+}
+
 .row {
   text-align: center;
   margin: auto;
+}
+
+.title{
+  font-size: 5em;
+  text-align: center;
+  font-weight: bold;
+  background-color:
 }
 /*
 h1 {

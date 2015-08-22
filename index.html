@@ -7,62 +7,107 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
+    <div class="container-fluid">
 
-    <div id="wrap">
 
-      <div class="row">
-          <div>
+      <div class="col-xs-5 sidebar">
+        <nav class="navbar navbar-inverse navbar-fixed-left" id="sidebar-wrapper" role="navigation">
+          <ul class="nav sidebar-nav">
+            <li class="sidebar-brand">
+              <a href="#">
+                Brand
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">Team</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </nav>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <div class="col-xs-7 gamebar">
+        <div class="row">
             <div>
-              <button class="speed" id='slow'>Slow</button>
-              <button class="speed" id='medium'>Medium</button>
-              <button class="speed" id='fast'>Fast</button>
+              <div>
+                <button class="speed" id='slow'>Slow</button>
+                <button class="speed" id='medium'>Medium</button>
+                <button class="speed" id='fast'>Fast</button>
+              </div>
             </div>
-          </div>
-      </div>
-
-      <div class="row">
-        <div id="imageLetter">
-
         </div>
-      </div>
 
-      <div class="row">
-        <div>
-          <div class="img">
-            <img id="slideshow" src="images/play.png" alt="alphabet img">
+        <div class="row">
+          <div id="imageLetter">
+
           </div>
         </div>
-      </div>
 
-      <div class="row">
+        <div class="row">
           <div>
-            <div class="btn">
-              <button class="glyphicon glyphicon-play" id='playBtn' style="color:white"></button>
-              <button class="glyphicon glyphicon-pause on" id='pauseBtn'></button>
-              <button class="glyphicon glyphicon-refresh" id='resetBtn'></button>
-              <button class="glyphicon glyphicon-font on" id='textOn'></button>
-              <button class="glyphicon glyphicon-font" id='textOff'></button>
-              <button class="glyphicon glyphicon-flash" id='quizOff'></button>
-              <button class="glyphicon glyphicon-flash on" id='quizOn'></button>
+            <div class="img">
+              <img id="slideshow" src="images/play.png" alt="alphabet img">
             </div>
           </div>
-      </div>
+        </div>
 
-      <div class="row">
-        <div>
-          <div class="input">
-            <input class="input__input" type="text" placeholder="Type Word Here">
-            <div class="input__bg"></div>
+        <div class="row">
+            <div>
+              <div class="btn">
+                <button class="glyphicon glyphicon-play" id='playBtn' style="color:white"></button>
+                <button class="glyphicon glyphicon-pause on" id='pauseBtn'></button>
+                <button class="glyphicon glyphicon-refresh" id='resetBtn'></button>
+                <button class="glyphicon glyphicon-font on" id='textOn'></button>
+                <button class="glyphicon glyphicon-font" id='textOff'></button>
+                <button class="glyphicon glyphicon-flash" id='quizOff'></button>
+                <button class="glyphicon glyphicon-flash on" id='quizOn'></button>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <div class="input">
+              <input class="input__input" type="text" placeholder="Type Word Here">
+              <div class="input__bg"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!--     // <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/5.0.10/bootstrap-slider.min.js"></script> -->
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/alphabet.js"></script>
     <script type="text/javascript" src="js/utility.js"></script>
+    <script type="text/javascript" src="js/alphabet.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

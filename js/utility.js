@@ -5,7 +5,8 @@
   var quiz = "off";
   var random;
   var incorrect;
-
+  var alphabetCopy = alphabetArray.slice(0);
+  var speed = 1900;
 
 //on and off for overlapping css buttons
 function change(hide, show) {
