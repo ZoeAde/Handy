@@ -33,15 +33,7 @@ body {
   font-size: 5em;
   text-align: center;
   font-weight: bold;
-  background-color:
 }
-/*
-h1 {
-  font-size: 80px;
-  text-align: center;
-  color: #eee;
-  font-family: 'Proxima Nova', 'futura', 'helvetica';
-}*/
 
 img {
   padding-bottom: 40px;
@@ -116,7 +108,7 @@ button {
 #sidebar-wrapper {
     margin-left: -150px;
     left: 70px;
-    width: 150px;
+    width: 220px;
     background: #222;
     position: fixed;
     height: 100%;
@@ -127,7 +119,7 @@ button {
 .sidebar-nav {
     display: block;
     float: left;
-    width: 150px;
+    width: 220px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -142,7 +134,7 @@ button {
     padding-left: 150px;
 }
 #wrapper.active #sidebar-wrapper {
-    left: 150px;
+    left: 220px;
 }
 
 #page-content-wrapper {
@@ -154,7 +146,7 @@ button {
     display: block;
     float: left;
     text-decoration: none;
-    width: 150px;
+    width: 220px;
     background: #252525;
     border-top: 1px solid #373737;
     border-bottom: 1px solid #1A1A1A;
@@ -171,8 +163,8 @@ button {
 }
 
 .sidebar-nav li {
-  line-height: 40px;
-  text-indent: 20px;
+  line-height: 50px;
+  text-indent: 10px;
 }
 
 .sidebar-nav li a {
@@ -207,23 +199,20 @@ button {
   background: none;
 }
 
-#main_icon
-{
-    float:right;
-   padding-right: 65px;
+#main_icon {
+   float:right;
+   padding-right: 61px;
    padding-top:20px;
 }
-.sub_icon
-{
-    float:right;
+.sub_icon {
+   float:right;
    padding-right: 65px;
-   padding-top:10px;
+   padding-top:15px;
 }
 .content-header {
   height: 65px;
   line-height: 65px;
 }
-
 .content-header h1 {
   margin: 0;
   margin-left: 20px;
@@ -236,15 +225,19 @@ button {
     padding-left: 70px;
     transition: all .4s ease 0s;
 }
+
 #sidebar-wrapper {
     left: 70px;
 }
+
 #wrapper.active {
     padding-left: 150px;
 }
+
 #wrapper.active #sidebar-wrapper {
     left: 150px;
-    width: 150px;
+    width: 220px;
     transition: all .4s ease 0s;
 }
+
 }
