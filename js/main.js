@@ -13,6 +13,10 @@ $(document).on('ready', function() {
   var speedBtns = $('.speed');
 
 reset();
+$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+});
 
 //reset screen to original format
 function reset() {
@@ -25,7 +29,7 @@ function reset() {
   imgBox.attr('src', "images/play.png");
   alphabetCopy = alphabetArray.slice(0);
   speedBtns.css('background-color', 'transparent');
-  $('#slow').css('background-color', '#FFCF31')
+  $('#slow').css('background-color', '#FFCF31');
   clearInterval(timer);
   startValues();
 }
