@@ -3,18 +3,6 @@ body {
   height: 100%;
 }
 
-.sidebar {
-  background-color: #4C273C;
-  border-right-style: solid;
-  border-right-width: 1px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 50%;
-/*  z-index: -1;*/
-}
-
 .gamebar {
   position: fixed;
   top: 0;
@@ -24,16 +12,12 @@ body {
 /*  z-index: -1;*/
 }
 
-.row {
-  text-align: center;
-  margin: auto;
-}
-
+/*
 .title{
   font-size: 5em;
   text-align: center;
   font-weight: bold;
-}
+}*/
 
 img {
   padding-bottom: 40px;
@@ -60,7 +44,7 @@ img {
   color:white;
 }
 
-button {
+/*button {
   width: 2.9em;
   font-size: 36px;
   padding: 0.5em 0.6em;
@@ -74,15 +58,15 @@ button {
   background-color: transparent;
   color: white;
   text-align: center;
-}
+}*/
 
 ::-webkit-input-placeholder {
   color:#FFCF31;
 }
 
-.on {
+/*.on {
   background-color: #4C273C;
-}
+}*/
 
 #imageLetter {
   color: #4C273C;
@@ -99,6 +83,7 @@ button {
   margin-top: 1%;
 }
 
+/*SIDEBAR SETTINGS*/
 #wrapper {
     padding-left: 70px;
     transition: all .4s ease 0s;
@@ -163,67 +148,64 @@ button {
 }
 
 .sidebar-nav li {
-  line-height: 50px;
-  text-indent: 10px;
+  line-height: 80px;
+  text-indent: 16px;
+  font-size: 20px;
 }
 
-.sidebar-nav li a {
+.subber li {
+  line-height: 30px;
+  font-size: 12px;
+}
+
+/*.sidebar-nav li a {
   color: #999999;
   display: block;
   text-decoration: none;
-}
+}*/
 
-.sidebar-nav li a:hover {
-  color: #fff;
-  background: rgba(255,255,255,0.2);
-  text-decoration: none;
-}
-
+/*
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
   text-decoration: none;
 }
-
-.sidebar-nav > .sidebar-brand {
+*/
+/*.sidebar-nav > .sidebar-brand {
   height: 65px;
   line-height: 60px;
   font-size: 18px;
-}
+}*/
 
 .sidebar-nav > .sidebar-brand a {
   color: #999999;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
-  background: none;
-}
-
 #main_icon {
    float:right;
-   padding-right: 61px;
-   padding-top:20px;
+   padding-right: 63px;
+   padding-top:25px;
 }
 .sub_icon {
    float:right;
    padding-right: 65px;
-   padding-top:15px;
+   padding-top:28px;
 }
-.content-header {
+/*.content-header {
   height: 65px;
   line-height: 65px;
-}
-.content-header h1 {
+}*/
+/*.content-header h1 {
   margin: 0;
   margin-left: 20px;
   line-height: 65px;
   display: inline-block;
-}
+}*/
 
 @media (max-width:767px) {
     #wrapper {
     padding-left: 70px;
     transition: all .4s ease 0s;
+  }
 }
 
 #sidebar-wrapper {
@@ -240,4 +222,4 @@ button {
     transition: all .4s ease 0s;
 }
 
-}
+
