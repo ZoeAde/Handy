@@ -76,12 +76,12 @@ function quizGame() {
 
 
 // change button border color on hover
-$('button').mouseover(function() {
-  $(this).css("border-color", "white");
+$('a').mouseover(function() {
+  $(this).css("background-color", "#404040");
 });
 
-$('button').mouseleave(function() {
-  $(this).css("border-color", "#FFCF31");
+$('a').mouseleave(function() {
+  $(this).css("background-color", "#252525");
 });
 
 //change input border color on hover
