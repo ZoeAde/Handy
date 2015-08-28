@@ -45,12 +45,12 @@ img {
 
 
 #imageLetter {
-  color: #605366;
+  color: #252525;
   font-weight: bold;
   font-size: 12em;
   text-align: center;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #4C273C;
+  -webkit-text-stroke-width: 7px;
+  -webkit-text-stroke-color: #605366;
 }
 
 
