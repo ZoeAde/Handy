@@ -10,13 +10,23 @@ $(document).on('ready', function() {
   var resetBtn = $('#resetBtn');
   var quizOn = $('#quizOn');
   var quizOff = $('#quizOff');
-  var speedBtns = $('.speed');
+  var speedBtns = $('a');
+
 
 reset();
+
 $("#menu-toggle").click(function(e) {
   e.preventDefault();
   $("#wrapper").toggleClass("active");
+  if (menu === "open") {
+    showLetter(imageLetter, "");
+    menu = "closed";
+  }
+  else {
+    menu = "open";
+  }
 });
+
 
 //reset screen to original format
 function reset() {
@@ -28,8 +38,7 @@ function reset() {
   letterBox.attr("placeholder", "Type Word Here");
   imgBox.attr('src', "images/play.png");
   alphabetCopy = alphabetArray.slice(0);
-  speedBtns.css('background-color', 'transparent');
-  $('#slow').css('background-color', '#FFCF31');
+  $('#slow').css('color', '#FFCF31');
   clearInterval(timer);
   startValues();
 }
@@ -98,7 +107,6 @@ $('input').mouseleave(function() {
 playBtn.on('click', function() {
   change(playBtn, pauseBtn);
   setTimer(speed);
-  console.log(speed);
 });
 
 //pause btn stops setInterval on given index
@@ -116,18 +124,23 @@ resetBtn.on('click', function() {
 textOnBtn.on('click', function() {
   change(textOnBtn, textOffBtn);
   text = "off";
+
 });
 
 //show text letters on screen
 textOffBtn.on('click', function() {
-  change(textOffBtn, textOnBtn);
-  text = "on";
+  console.log(quiz);
+  if (quiz === "off") {
+    change(textOffBtn, textOnBtn);
+    text = "on";
+  }
 });
 
 //turn quiz off
 quizOn.on('click', function() {
   change(quizOn, quizOff);
   quiz = "off";
+  reset();
 });
 
 //turn quiz on, hide letters, stop slideshow
@@ -148,7 +161,7 @@ quizOff.on('click', function() {
 letterBox.on('keyup', function() {
   var letterInput;
   if (quiz === "on") {
-    letterInput = letterBox.val();
+    letterInput = letterBox.val().toLowerCase();
     if (quizLetter === letterInput) {
       alphabetCopy.splice(random, 1);
       letterBox.val("");
@@ -162,30 +175,33 @@ letterBox.on('keyup', function() {
     }
   }
   else {
-    letterInput = letterBox.val().slice(-1);
+    letterInput = letterBox.val().slice(-1).toLowerCase();
     imgBox.attr('src', alphabet[letterInput]);
-    showLetter(imageLetter, letterInput);
+    if (menu === "open") {
+      showLetter(imageLetter, letterInput);
+    }
   }
 });
 
 //change slideshow speeds between three values
 $('#slow').on('click', function() {
-  speedBtns.css('background-color', 'transparent');
-  $(this).css('background-color', '#FFCF31');
+  speedBtns.css('color', '#999');
+  $(this).css('color', '#FFCF31');
+
   speed = 1900;
-})
+});
 
 $('#medium').on('click', function() {
-  speedBtns.css('background-color', 'transparent');
-  $(this).css('background-color', '#FFCF31');
+  speedBtns.css('color', '#999');
+  $(this).css('color', '#FFCF31');
   speed = 1200;
-})
+});
 
 $('#fast').on('click', function() {
-  speedBtns.css('background-color', 'transparent');
-  $(this).css('background-color', '#FFCF31');
-  speed = 800;
-})
+  speedBtns.css('color', '#999');
+  $(this).css('color', '#FFCF31');
+  speed = 700;
+});
 
 });
 

@@ -7,6 +7,7 @@
   var incorrect;
   var alphabetCopy = alphabetArray.slice(0);
   var speed = 1900;
+  var menu = "open";
 
 //on and off for overlapping css buttons
 function change(hide, show) {
@@ -17,16 +18,18 @@ function change(hide, show) {
 //show or hide letter text above letter image
 function showLetter(target, letter) {
   if (text === "on") {
-    target.html(letter);
+    target.html(letter.toUpperCase());
   }
   else if (text === "off") {
     target.html(" ");
   }
 }
 
+//return to original values on reset
 function startValues() {
   text = "off";
   quiz = "off";
+  menu = "open";
   index = 0;
   incorrect = 0;
   speed = 1900;
