@@ -52,7 +52,7 @@ img {
   50%  { opacity:0; }
   100% { opacity:1; }
 }
-#words {
+/*#words {
    -webkit-animation: flickerAnimation 2s infinite;
    -moz-animation: flickerAnimation 2s infinite;
    -o-animation: flickerAnimation 2s infinite;
@@ -66,4 +66,4 @@ img {
    -o-animation: flickerAnimation 2s infinite;
     animation: flickerAnimation 2s infinite;
 }
-
+*/
