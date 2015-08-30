@@ -15,17 +15,15 @@ h1 div {
   display: inline-block;
 }
 
-#words div {
-  margin: 0 4rem;
-}
 #words {
   padding-top: 40%;
   color: #FFCF31;
-
 }
 
 #emojis {
-  padding-top: -10%;
+  margin-top: -7%;
+  margin-left: -2%;
+  margin-right: 2.5%;
 }
 
 img {
@@ -33,3 +31,39 @@ img {
   height: 1.3em;
   margin: 0 3rem;
 }
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+#words {
+   -webkit-animation: flickerAnimation 2s infinite;
+   -moz-animation: flickerAnimation 2s infinite;
+   -o-animation: flickerAnimation 2s infinite;
+    animation: flickerAnimation 2s infinite;
+}
+
+
+#emojis {
+   -webkit-animation: flickerAnimation 2s infinite;
+   -moz-animation: flickerAnimation 2s infinite;
+   -o-animation: flickerAnimation 2s infinite;
+    animation: flickerAnimation 2s infinite;
+}
+
