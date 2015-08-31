@@ -1,7 +1,6 @@
 body {
   background-color: #605366;
   height: 100%;
-/*  font-family: 'Open Sans Condensed', sans-serif;*/
 }
 
 .gamebar {
@@ -30,8 +29,10 @@ img, .intro {
 }
 
 .input__input {
-  font-size: 36px;
-  width: 12em;
+  font-size: 30px;
+  font-family: 'Oxygen', sans-serif;
+  letter-spacing: 3px;
+  width: 14.3em;
   padding: 0.5em 0.6em;
   line-height: 1.4;
   -webkit-appearance: none;
