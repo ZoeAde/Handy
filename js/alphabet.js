@@ -55,3 +55,4 @@ var alphabetArray = [
   {y: "images/y.jpg"},
   {z: "images/z.jpg"}
 ];
+

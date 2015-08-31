@@ -28,11 +28,10 @@
               </a>
               <div class="collapse" id="toggleDemo" style="height: 0px;">
                 <ul class="nav nav-list subber">
-                  <li><a href="#" id="slow">Slow<span class="subLi sub_icon glyphicon glyphicon-triangle-right" ></span></a></li>
-                  <li><a href="#" id="medium">Medium<span class="subLi sub_icon glyphicon glyphicon-forward" ></span></a></li>
-                  <li><a href="#" id="fast">Fast<span class="subLi sub_icon glyphicon glyphicon-fast-forward" ></span></a></li>
                   <li>
-                    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                    <span>Fast</span>
+                    <input id="speedSlide" data-slider-id='ex1Slider' type="text" data-slider-min="700" data-slider-max="2500" data-slider-step="1" data-slider-value="50"/>
+                    <span>Slow</span>
                   </li>
                 </ul>
               </div>
@@ -46,8 +45,6 @@
                 </ul>
               </div>
             </li>
-
-
             <li id="quizOff"><a>Quiz<span class="sub_icon glyphicon glyphicon-queen"></span></a></li>
             <li id="textOn"><a id="textA" class="yellow">Text<span class="sub_icon glyphicon glyphicon-font" ></span></a></li>
             <li id="textOff"><a>Text<span class="sub_icon glyphicon glyphicon-font" ></span></a></li>
@@ -58,35 +55,37 @@
         </div>
 
 <!--       GAME WINDOW -->
-      <div class="row">
-        <div class="col-sm-7 gamebar">
+        <div class="row">
+          <div class="col-sm-7 gamebar">
 
-          <div class="row">
-            <div>
-              <div class="img">
-                <img id="slideshow" src="images/play.png" alt="alphabet img">
+            <div class="row">
+              <div>
+                <div class="img">
+                  <img id="slideshow" src="" alt="alphabet img">
+                </div>
+                <div class="p">Welcome to Handy, an interactive learning platform for American Sign Language. Simply enter a letter into the box below to begin your practice, or select the quiz option on the left to test your skills.
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div>
-              <div class="input">
-                <input class="input__input" type="text" placeholder="Type Word Here">
-                <div class="input__bg"></div>
+            <div class="row">
+              <div>
+                <div class="input">
+                  <input class="input__input" type="text" placeholder="Type Word Here">
+                  <div class="input__bg"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/5.0.10/bootstrap-slider.min.js"></script>
     <script type="text/javascript" src="js/alphabet.js"></script>
     <script type="text/javascript" src="js/utility.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/5.0.10/bootstrap-slider.min.js"></script>
   </body>
 </html>

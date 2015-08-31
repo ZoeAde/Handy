@@ -1,6 +1,8 @@
 $(document).on('ready', function() {
 
 reset();
+var speedSlider = $('#speedSlide').slider();
+var speedValue = speedSlider.slider('getValue');
 
 // change button border color on hover
 $('a').mouseover(function() {
@@ -105,7 +107,6 @@ letterBox.on('keyup', function() {
 $('#slow').on('click', function() {
   speedBtns.css('color', '#999');
   $(this).css('color', '#FFCF31');
-
   speed = 1900;
 });
 
