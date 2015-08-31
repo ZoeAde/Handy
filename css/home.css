@@ -32,7 +32,7 @@ img {
   margin: 0 3rem;
 }
 
-@keyframes flickerAnimation {
+/*@keyframes flickerAnimation {
   0%   { opacity:1; }
   50%  { opacity:0; }
   100% { opacity:1; }
@@ -51,7 +51,7 @@ img {
   0%   { opacity:1; }
   50%  { opacity:0; }
   100% { opacity:1; }
-}
+}*/
 /*#words {
    -webkit-animation: flickerAnimation 2s infinite;
    -moz-animation: flickerAnimation 2s infinite;
@@ -67,3 +67,43 @@ img {
     animation: flickerAnimation 2s infinite;
 }
 */
+
+
+/*WORDS FADING*/
+
+/*H*/
+@-webkit-keyframes fade {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#hL{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#aL{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+}
+#nL{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+}
+#dL{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+}
+#yL{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+
