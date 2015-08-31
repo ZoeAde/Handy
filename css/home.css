@@ -32,52 +32,12 @@ img {
   margin: 0 3rem;
 }
 
-/*@keyframes flickerAnimation {
-  0%   { opacity:1; }
-  50%  { opacity:0; }
-  100% { opacity:1; }
-}
-@-o-keyframes flickerAnimation{
-  0%   { opacity:1; }
-  50%  { opacity:0; }
-  100% { opacity:1; }
-}
-@-moz-keyframes flickerAnimation{
-  0%   { opacity:1; }
-  50%  { opacity:0; }
-  100% { opacity:1; }
-}
-@-webkit-keyframes flickerAnimation{
-  0%   { opacity:1; }
-  50%  { opacity:0; }
-  100% { opacity:1; }
-}*/
-/*#words {
-   -webkit-animation: flickerAnimation 2s infinite;
-   -moz-animation: flickerAnimation 2s infinite;
-   -o-animation: flickerAnimation 2s infinite;
-    animation: flickerAnimation 2s infinite;
-}
-
-
-#emojis {
-   -webkit-animation: flickerAnimation 2s infinite;
-   -moz-animation: flickerAnimation 2s infinite;
-   -o-animation: flickerAnimation 2s infinite;
-    animation: flickerAnimation 2s infinite;
-}
-*/
-
-
 /*WORDS FADING*/
-
-/*H*/
 @-webkit-keyframes fade {
     0% { opacity: 1; }
     50% { opacity: 0; }
     100% { opacity: 1; }
 }
-
 #hL{
     -webkit-animation: fade;
     -webkit-animation-duration: 5s;
@@ -106,4 +66,41 @@ img {
 }
 
 
+/*emoji fade ins*/
+/*#hE{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-delay: 9s;
+    transition-duration: 0s;
+}
 
+#aE{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    animation-delay: 11s;
+    transition-duration: 1s;
+}
+#nE{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-delay: 7s;
+    transition-duration: 1s;
+}
+#dE{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    animation-delay: 10s;
+    transition-duration: 1s;
+}
+#yE{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-delay: 5s;
+    transition-duration: 1s;
+}
+*/
