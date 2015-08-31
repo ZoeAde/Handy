@@ -1,6 +1,7 @@
 body {
   background-color: #605366;
   height: 100%;
+/*  font-family: 'Open Sans Condensed', sans-serif;*/
 }
 
 .gamebar {
@@ -10,7 +11,7 @@ body {
   right: 0;
 }
 
-img {
+img, .intro {
   padding-bottom: 70px;
   padding-top: 40px;
   width: 31em;
@@ -19,8 +20,13 @@ img {
   margin-bottom: -2%;
 }
 
+.newFont {
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 2px;
+}
+
 .input {
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 .input__input {
@@ -39,10 +45,17 @@ img {
   color:white;
 }
 
-.p {
-  width: 30em;
-  color: white;
-  font-size: 15px;
+.introWords {
+  color: #222;
+  font-size: 23px;
+  margin-top: 55px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 110px;
+  color: #FFCF31;
+  letter-spacing: 11px;
 }
 
 ::-webkit-input-placeholder, #pauseA, #textA, #quizA {
@@ -178,8 +191,19 @@ img {
 #ex1Slider .slider-handle {
   background: #605366;
 }
-span {
+
+.speedText {
   color: white;
+  font-size: 15px;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+#speedTab {
+  margin-left: -8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #363636;
 }
 
 .tooltip {

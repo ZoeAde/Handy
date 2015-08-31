@@ -1,8 +1,12 @@
 $(document).on('ready', function() {
-
+$('.img').hide();
 reset();
 var speedSlider = $('#speedSlide').slider();
 var speedValue = speedSlider.slider('getValue');
+$('.input').on("keyup", function() {
+  $('.intro').hide();
+  $('.img').show();
+})
 
 // change button border color on hover
 $('a').mouseover(function() {
