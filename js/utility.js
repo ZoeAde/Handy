@@ -6,7 +6,6 @@
   var random;
   var incorrect;
   var alphabetCopy = alphabetArray.slice(0);
-  var speed = 1900;
   var menu = "open";
   var letterBox = $('.input__input');
   var imgBox = $('.img img');
@@ -18,7 +17,8 @@
   var resetBtn = $('#resetBtn');
   var quizOn = $('#quizOn');
   var quizOff = $('#quizOff');
-  var speedBtns = $('a');
+  var speed;
+  var play = "off";
 
 //fade in title, intro, and text input box
 function introFadeIn() {
@@ -36,9 +36,9 @@ function startValues() {
   text = "off";
   quiz = "off";
   menu = "open";
+  play = "off"
   index = 0;
   incorrect = 0;
-  speed = 1900;
 }
 
 //reset screen to original format
@@ -131,7 +131,6 @@ function playWords() {
 //starts letter recognition game
 function quizGame() {
   if (alphabetCopy.length < 1) {
-    // alert("You've finished the quiz! You had " + incorrect + " incorrect answers.");
     $('#incorrect').html("All done! You answered incorrectly " + incorrect + " times.");
     $('#incorrect').fadeIn(400);
     $('#incorrect').delay(5000).fadeOut(400, function() {

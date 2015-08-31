@@ -1,7 +1,6 @@
 $(document).on('ready', function() {
 
-$('#speedSlide').slider();
-// var speedValue = speedSlider.slider('getValue');
+var speedSlider = $('#speedSlide').slider();
 introFadeIn();
 reset();
 
@@ -32,12 +31,16 @@ $('input').mouseleave(function() {
 //On Click Functions:
 // play button plays through array index in header and pause button becomes available
 playBtn.on('click', function() {
+  play = "on";
   change(playBtn, pauseBtn);
+  speed = $('#speedSlide').slider('getValue');
+  console.log("speed" + speed);
   setTimer(speed);
 });
 
 //pause btn stops setInterval on given index
 pauseBtn.on('click', function() {
+  play = "off"
   change(pauseBtn, playBtn);
   setTimer(speed);
 });
@@ -52,12 +55,12 @@ resetBtn.on('click', function() {
 textOnBtn.on('click', function() {
   change(textOnBtn, textOffBtn);
   text = "off";
-
 });
 
 //show text letters on screen
 textOffBtn.on('click', function() {
   console.log(quiz);
+  toggleSpeed();
   if (quiz === "off") {
     change(textOffBtn, textOnBtn);
     text = "on";
