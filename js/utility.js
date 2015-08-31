@@ -51,12 +51,17 @@ $("#menu-toggle").click(function(e) {
   $("#wrapper").toggleClass("active");
   if (menu === "open") {
     showLetter(imageLetter, "");
+    toggleSpeed();
     menu = "closed";
   }
   else {
     menu = "open";
   }
 });
+
+function toggleSpeed() {
+  $('#toggleDemo').removeClass("collapse in").addClass("collapse");
+}
 
 //reset screen to original format
 function reset() {
