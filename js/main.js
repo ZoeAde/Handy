@@ -1,12 +1,15 @@
 $(document).on('ready', function() {
-$('.img').hide();
+
+$('#speedSlide').slider();
+// var speedValue = speedSlider.slider('getValue');
+introFadeIn();
 reset();
-var speedSlider = $('#speedSlide').slider();
-var speedValue = speedSlider.slider('getValue');
+
 $('.input').on("keyup", function() {
   $('.intro').hide();
   $('.img').show();
-})
+});
+
 
 // change button border color on hover
 $('a').mouseover(function() {
@@ -42,6 +45,7 @@ pauseBtn.on('click', function() {
 //reset window
 resetBtn.on('click', function() {
   reset();
+  returnIntro();
 });
 
 //remove text letters from screen
@@ -69,6 +73,7 @@ quizOn.on('click', function() {
 
 //turn quiz on, hide letters, stop slideshow
 quizOff.on('click', function() {
+  $('.errors').html(incorrect);
   change(quizOff, quizOn);
   clearInterval(timer);
   change(pauseBtn, playBtn);
@@ -96,6 +101,7 @@ letterBox.on('keyup', function() {
       incorrect ++;
       letterBox.val("");
       letterBox.attr("placeholder", "Try again!");
+      $('.errors').html(incorrect);
     }
   }
   else {
@@ -107,24 +113,6 @@ letterBox.on('keyup', function() {
   }
 });
 
-//change slideshow speeds between three values
-$('#slow').on('click', function() {
-  speedBtns.css('color', '#999');
-  $(this).css('color', '#FFCF31');
-  speed = 1900;
-});
-
-$('#medium').on('click', function() {
-  speedBtns.css('color', '#999');
-  $(this).css('color', '#FFCF31');
-  speed = 1200;
-});
-
-$('#fast').on('click', function() {
-  speedBtns.css('color', '#999');
-  $(this).css('color', '#FFCF31');
-  speed = 700;
-});
 
 });
 

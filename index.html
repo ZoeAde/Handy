@@ -40,9 +40,9 @@
             <li id="quizOn">
               <a id="quizA" href="#" data-toggle="collapse" data-target="#toggleQuiz" data-parent="#sidenav02" class="collapsed"> Quiz <span class="sub_icon glyphicon glyphicon-queen"></span>
               </a>
-              <div class="collapse" id="toggleDemo" style="height: 0px;">
+              <div class="collapse in" id="toggleDemo" style="height: 0px;">
                 <ul class="nav nav-list subber">
-                  <li><a href="#" id="score">SCORE: <span class="subLi sub_icon glyphicon glyphicon-triangle-right" ></span></a></li>
+                  <li><a href="#" id="score">Total Incorrect: <span class="errors"></span></a></li>
                 </ul>
               </div>
             </li>
@@ -58,12 +58,17 @@
 <!--       GAME WINDOW -->
         <div class="row">
           <div class="col-sm-7 gamebar">
-
+            <div class="row alertMsg">
+              <div class="alert alert-danger" role="alert" id="incorrect">
+                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                <span>You had a total of 10 incorrect answers!</span>
+              </div>
+            </div>
             <div class="row newFont">
               <div>
                 <div class="intro">
-                  <h1>WELCOME TO HANDY</h1>
-                  <p class="introWords">
+                  <h1 id="introTitle">WELCOME TO HANDY</h1>
+                  <p id="introWords">
                   This is an interactive learning platform for American Sign Language. Simply enter a letter into the box below to begin practicing, or select the quiz option on the left to test your skills.
                   </p>
                 </div>

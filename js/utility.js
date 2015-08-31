@@ -20,6 +20,17 @@
   var quizOff = $('#quizOff');
   var speedBtns = $('a');
 
+//fade in title, intro, and text input box
+function introFadeIn() {
+  $('.img').hide();
+  $('#introWords').hide();
+  $('#introTitle').hide();
+  $('.input__input').hide();
+  $('#introTitle').delay(800).fadeIn(1500);
+  $('#introWords').delay(2000).fadeIn(1200);
+  $('.input__input').delay(2000).fadeIn(1200);
+}
+
 //return to original values on reset
 function startValues() {
   text = "off";
@@ -28,6 +39,34 @@ function startValues() {
   index = 0;
   incorrect = 0;
   speed = 1900;
+}
+
+//reset screen to original format
+function reset() {
+  $('#incorrect').hide();
+  change(pauseBtn, playBtn);
+  change(textOnBtn, textOffBtn);
+  change(quizOn, quizOff);
+  imageLetter.html("");
+  letterBox.val("");
+  letterBox.attr("placeholder", "Type Word Here");
+  alphabetCopy = alphabetArray.slice(0);
+  $('#slow').css('color', '#FFCF31');
+  clearInterval(timer);
+  startValues();
+  returnIntro();
+}
+
+//return to home screen
+function returnIntro() {
+  $('.img').hide();
+  $('.intro').show();
+}
+
+//return to image screen
+function returnImg() {
+  $('.img').show();
+  $('.intro').hide();
 }
 
 //on and off for overlapping css buttons
@@ -46,6 +85,7 @@ function showLetter(target, letter) {
   }
 }
 
+//when the menu is closed, text and speed will collaspse
 $("#menu-toggle").click(function(e) {
   e.preventDefault();
   $("#wrapper").toggleClass("active");
@@ -59,23 +99,9 @@ $("#menu-toggle").click(function(e) {
   }
 });
 
+//speed subnav collapse
 function toggleSpeed() {
   $('#toggleDemo').removeClass("collapse in").addClass("collapse");
-}
-
-//reset screen to original format
-function reset() {
-  change(pauseBtn, playBtn);
-  change(textOnBtn, textOffBtn);
-  change(quizOn, quizOff);
-  imageLetter.html("");
-  letterBox.val("");
-  letterBox.attr("placeholder", "Type Word Here");
-  imgBox.attr('src', "images/play.png");
-  alphabetCopy = alphabetArray.slice(0);
-  $('#slow').css('color', '#FFCF31');
-  clearInterval(timer);
-  startValues();
 }
 
 //sets speed of image slideshow
@@ -105,15 +131,19 @@ function playWords() {
 //starts letter recognition game
 function quizGame() {
   if (alphabetCopy.length < 1) {
-    alert("You've finished the quiz! You had " + incorrect + " incorrect answers.");
-    reset();
+    // alert("You've finished the quiz! You had " + incorrect + " incorrect answers.");
+    $('#incorrect').html("All done! You answered incorrectly " + incorrect + " times.");
+    $('#incorrect').fadeIn(400);
+    $('#incorrect').delay(5000).fadeOut(400, function() {
+      reset();
+    });
   }
   else {
   quiz = "on";
   quizLetter = "";
   random = Math.floor(Math.random() * alphabetCopy.length);
   quizLetter = Object.keys(alphabetCopy[random]).toString();
-  console.log(quizLetter);
   imgBox.attr('src', alphabet[quizLetter]);
+  returnImg();
   }
 }
