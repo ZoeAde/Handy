@@ -1,7 +1,7 @@
 $(document).on('ready', function() {
 
 $('body').on("click", function() {
-  window.location.href="/handy/main";
+  window.location.href="/handy";
 });
 
 //   var $emojis = $('#emojis');
