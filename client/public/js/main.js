@@ -109,7 +109,7 @@ letterBox.on('keyup', function() {
   }
   else {
     letterInput = letterBox.val().slice(-1).toLowerCase();
-    imgBox.attr('src', alphabet[letterInput]);
+    imgBox.attr('src', "../" + alphabet[letterInput]);
     if (menu === "open") {
       showLetter(imageLetter, letterInput);
     }

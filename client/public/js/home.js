@@ -1,10 +1,15 @@
 $(document).on('ready', function() {
-  var $emojis = $('#emojis');
-  var $words = $('#words');
 
-$(emojis).hide();
+$('body').on("click", function() {
+  window.location.href="/handy/main";
+});
+
+//   var $emojis = $('#emojis');
+//   var $words = $('#words');
+
+// $(emojis).hide();
 // $(words).hide();
-var h = $('.h');
+// var h = $('.h');
 
 //v3 fade out letter then change before returning
 

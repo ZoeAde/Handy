@@ -120,7 +120,7 @@ function playWords() {
   var word = letterBox.val();
   var wordArray = word.replace(/ /g,'');
   letter = wordArray[index];
-  imgBox.attr("src", alphabet[letter]);
+  imgBox.attr("src", "../" + alphabet[letter]);
   showLetter(imageLetter, letter);
   index++;
   if (index >= wordArray.length) {
@@ -142,7 +142,7 @@ function quizGame() {
   quizLetter = "";
   random = Math.floor(Math.random() * alphabetCopy.length);
   quizLetter = Object.keys(alphabetCopy[random]).toString();
-  imgBox.attr('src', alphabet[quizLetter]);
+  imgBox.attr('src', "../" + alphabet[quizLetter]);
   returnImg();
   }
 }
