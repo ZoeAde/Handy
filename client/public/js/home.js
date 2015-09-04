@@ -4,11 +4,11 @@ $('body').on("click", function() {
   window.location.href="/handy";
 });
 
-//   var $emojis = $('#emojis');
-//   var $words = $('#words');
+  var $emojis = $('.emojis');
+//   var $words = $('.words');
 
-// $(emojis).hide();
-// $(words).hide();
+$emojis.hide();
+// $words.hide();
 // var h = $('.h');
 
 //v3 fade out letter then change before returning
@@ -88,14 +88,12 @@ $('body').on("click", function() {
 
 //v1 all images and words change simultaneously
 // function fadeInOut() {
-//     $(words).delay(800).fadeOut(1200);
-//     $(words).delay(1200).fadeIn(1200);
-//     $(emojis).delay(1100).fadeIn(2200);
-//     $(emojis).delay(5000).fadeOut(2200);
-
+//     $emojis.hide();
+//     $emojis.delay(1100).fadeIn(2200);
+//     $words.fadeOut());
 // }
 
-// setInterval(function() { fadeInOut() }, 2000);
+// setInterval(function() { fadeInOut() }, 3200);
 
 });
 
