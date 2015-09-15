@@ -1,16 +1,18 @@
 $(document).on('ready', function() {
-
-var speedSlider = $('#speedSlide').slider();
-introFadeIn();
 reset();
+introFadeIn();
+});
 
+///////// start game when letter entered to input////////
 $('.input').on("keyup", function() {
   $('.intro').hide();
   $('.img').show();
 });
 
+////////load speed slider ///////////////////////////////
+var speedSlider = $('#speedSlide').slider();
 
-// change button border color on hover
+//////////// css color changes on hover /////////////////
 $('a').mouseover(function() {
   $(this).css("background-color", "#404040");
 });
@@ -19,7 +21,6 @@ $('a').mouseleave(function() {
   $(this).css("background-color", "#252525");
 });
 
-//change input border color on hover
 $('input').mouseover(function() {
   $(this).css("border-color","#FFCF31");
 });
@@ -28,8 +29,8 @@ $('input').mouseleave(function() {
   $(this).css("border-color","white");
 });
 
-//On Click Functions:
-// play button plays through array index in header and pause button becomes available
+///////////////////// ON CLICK FUNCTION ///////////////////
+// play through slideshow
 playBtn.on('click', function() {
   play = "on";
   change(playBtn, pauseBtn);
@@ -38,9 +39,9 @@ playBtn.on('click', function() {
   setTimer(speed);
 });
 
-//pause btn stops setInterval on given index
+//pause slideshow
 pauseBtn.on('click', function() {
-  play = "off"
+  play = "off";
   change(pauseBtn, playBtn);
   setTimer(speed);
 });
@@ -89,7 +90,8 @@ quizOff.on('click', function() {
   quizGame();
 });
 
-//when user types in letter, if they are playing the game it will test if right and move on, otherwise it will show the corresponding image
+
+//when user types in letter, if they are playing the game it will test if right and move on, if not playing game it will show the corresponding image
 letterBox.on('keyup', function() {
   var letterInput;
   if (quiz === "on") {
@@ -115,7 +117,3 @@ letterBox.on('keyup', function() {
     }
   }
 });
-
-
-});
-
