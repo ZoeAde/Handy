@@ -1,7 +1,6 @@
 $(document).on('ready', function() {
 reset();
 introFadeIn();
-});
 
 ///////// start game when letter entered to input////////
 $('.input').on("keyup", function() {
@@ -116,4 +115,6 @@ letterBox.on('keyup', function() {
       showLetter(imageLetter, letterInput);
     }
   }
+});
+
 });

@@ -202,6 +202,6 @@ img, .intro {
   background-color: #363636;
 }
 
-.tooltip {
+.hidden, .tooltip {
   visibility: hidden;
 }
