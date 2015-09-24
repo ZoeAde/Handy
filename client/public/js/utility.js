@@ -132,6 +132,7 @@ function playWords() {
 function quizGame() {
   if (alphabetCopy.length < 1) {
     $('#incorrect').html("All done! You answered incorrectly " + incorrect + " times.");
+    $('#incorrect').removeClass("hidden");
     $('#incorrect').fadeIn(400);
     $('#incorrect').delay(5000).fadeOut(400, function() {
       reset();
