@@ -205,3 +205,7 @@ img, .intro {
 .hidden, .tooltip {
   visibility: hidden;
 }
+
+.show {
+  visibility: visible;
+}
