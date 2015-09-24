@@ -36,7 +36,7 @@ function startValues() {
   text = "off";
   quiz = "off";
   menu = "open";
-  play = "off"
+  play = "off";
   index = 0;
   incorrect = 0;
 }

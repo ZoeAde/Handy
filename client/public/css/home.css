@@ -11,16 +11,9 @@ body {
   text-align: center;
 }
 
-
 #words {
   padding-top: 40%;
   color: #FFCF31;
-}
-
-img {
-  width: 1.3em;
-  height: 1.3em;
-  margin-top: -2.5em;
 }
 
 @-webkit-keyframes fade {
@@ -56,31 +49,7 @@ img {
     -webkit-animation-iteration-count: infinite;
 }
 
-
-/*Emoji Image Title*/
-/*#hE{
-    -webkit-animation: fade;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
+.click {
+  margin-bottom: 0;
+  color: #FFCF31;
 }
-
-#aE{
-    -webkit-animation: fade;
-    -webkit-animation-duration: 7s;
-    -webkit-animation-iteration-count: infinite;
-}
-#nE{
-    -webkit-animation: fade;
-    -webkit-animation-duration: 4s;
-    -webkit-animation-iteration-count: infinite;
-}
-#dE{
-    -webkit-animation: fade;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
-}
-#yE{
-    -webkit-animation: fade;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-}*/
