@@ -2,16 +2,16 @@ $(document).on('ready', function() {
 reset();
 introFadeIn();
 
-///////// start game when letter entered to input////////
+// start game when letter entered to input //
 $('.input').on("keyup", function() {
   $('.intro').hide();
   $('.img').show();
 });
 
-////////load speed slider ///////////////////////////////
+// load speed slider //
 var speedSlider = $('#speedSlide').slider();
 
-//////////// css color changes on hover /////////////////
+// css color changes on mouse over //
 $('a').mouseover(function() {
   $(this).css("background-color", "#404040");
 });
@@ -28,13 +28,12 @@ $('input').mouseleave(function() {
   $(this).css("border-color","white");
 });
 
-///////////////////// ON CLICK FUNCTION ///////////////////
+// *ON CLICK FUNCTION* //
 // play through slideshow
 playBtn.on('click', function() {
   play = "on";
   change(playBtn, pauseBtn);
   speed = $('#speedSlide').slider('getValue');
-  console.log("speed" + speed);
   setTimer(speed);
 });
 
@@ -74,7 +73,7 @@ quizOn.on('click', function() {
   reset();
 });
 
-//turn quiz on, hide letters, stop slideshow
+//turn quiz on (hide letters, stop slideshow)
 quizOff.on('click', function() {
   $('.errors').html(incorrect);
   change(quizOff, quizOn);
