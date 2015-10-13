@@ -80,9 +80,6 @@ img, .intro {
   font-size: 16px;
 }
 
-
-
-
 /*SIDEBAR SETTINGS*/
 #wrapper {
     padding-left: 70px;
@@ -196,6 +193,7 @@ img, .intro {
 }
 
 #speedTab {
+  position: static;
   margin-left: -8px;
   padding-top: 10px;
   padding-bottom: 10px;
