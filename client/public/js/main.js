@@ -91,7 +91,7 @@ quizOff.on('click', function() {
 
 //when user types in letter, if they are playing the game it will test if right and move on, if not playing game it will show the corresponding image
 letterBox.on('keyup', function() {
-  var letterInput;
+  var letterInput = letterBox.val();
   if (quiz === "on") {
     letterInput = letterBox.val().toLowerCase();
     if (quizLetter === letterInput) {
@@ -106,6 +106,13 @@ letterBox.on('keyup', function() {
       letterBox.attr("placeholder", "Try again!");
       $('.errors').html(incorrect);
     }
+  }
+  else if (letterInput[letterInput.length -1] === " ") {
+    imgBox.attr('src', "../" + alphabet[(letterInput[letterInput.length - 2]).toLowerCase()]);
+  }
+  else if (letterInput === "") {
+    console.log('hi')
+    imgBox.attr('src', "../images/play.png");
   }
   else {
     letterInput = letterBox.val().slice(-1).toLowerCase();
