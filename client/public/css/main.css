@@ -204,3 +204,6 @@ img, .intro {
   visibility: hidden;
 }
 
+input:focus {
+  outline: 0 !important;
+}

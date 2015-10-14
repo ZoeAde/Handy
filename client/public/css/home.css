@@ -103,4 +103,6 @@ body {
     to   { opacity: 1; }
 }
 
-button:focus {outline:0;}
+button:focus {
+  outline: 0 !important;
+}
